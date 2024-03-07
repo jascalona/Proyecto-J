@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-link{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #0d0d1a;
+    overflow-x: hidden;
+    padding-top: 30px;
+}
+
+.nav-link li a{
+    padding: 25px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    display: block;
+    text-align: justify;
+}
+
+.nav-link li a:hover{
+    font-weight: 700;
+    background-color: rgb(28, 28, 53);
+    color: #fff;
+}
+
+
+.nav-link li a i{
+    padding-right: 10px;
+}
+
+.logo img{
+    height: 100px;
+    margin-bottom: 80px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img:hover{
+    transform: scale(1.2);
+}
+
+.container-report{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.report{
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    width: 400px;
+    height: 280px;
+}
+
+.report:hover{
+    transform: scale(1.2);
+}
+
+.report img{
+    width: 200px;
+    height: 200px;
+}
+
+.report a{
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+.report a p{
+    color: #0d0d1a;
+    font-size: 20px;
+}
+
+.lin{
+    margin-top: 15px;
+    margin-bottom: 1px;
+    border-top: solid 1px #0d0d1a25;
+    margin-left: 1px;
+    margin-right: 90px; 
+}
+
+.link{
+    padding-top: 1px;
+}
+
+.link a{
+    color: #0707a2;
+    margin-left: 16px;
+}
+
+@media (min-width: 1546px){
+    .container-report{
+        margin-left: 9%;
+    }
+}
+
+@media (max-width: 1540px){
+    .container-report{
+        margin-left: 14%;
+    }
+
+    .container-report .report{
+        width: 340px;
+        height: 230px;
+    }
+}
+
+@media (max-width: 1235px){
+    .container-report .report{
+        margin-left: 4%;
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width:1100px){
+    .container-report{
+        margin-left: 37%;
+        flex-direction: column;
+    }
+}
+
+/*SISTEMA DE FILTRO*/
+
+
+
+/*sistema de filtrado*/
+
+[value="TODOS"]:checked ~ .posts .post[data-category]{
+    display: block;
+}
+
+[value="Impresoras_Monocromo"]:checked ~ .posts .post:not([data-category~="Impresoras_Monocromo"]),
+[value="Impresoras_a_Color"]:checked ~ .posts .post:not([data-category~="Impresoras_a_Color"]),
+[value="WorkCentre"]:checked ~ .posts .post:not([data-category~="WorkCentre"]),
+[value="Phaser"]:checked ~ .posts .post:not([data-category~="Phaser"]),
+[value="NODEJS"]:checked ~ .posts .post:not([data-category~="NODEJS"]),
+[value="VUE"]:checked ~ .posts .post:not([data-category~="VUE"]){
+    display: none;
+}
+
+[value="TODOS"]:checked ~ .container-category [for="TODOS"],
+[value="Impresoras_Monocromo"]:checked ~ .container-category [for="Impresoras_Monocromo"],
+[value="Impresoras_a_Color"]:checked ~ .container-category [for="Impresoras_a_Color"],
+[value="WorkCentre"]:checked ~ .container-category [for="WorkCentre"],
+[value="Phaser"]:checked ~ .container-category [for="Phaser"],
+[value="NODEJS"]:checked ~ .container-category [for="NODEJS"],
+[value="VUE"]:checked ~ .container-category [for="VUE"]{
+    background: #D2313B;
+    color: #fff;
+}

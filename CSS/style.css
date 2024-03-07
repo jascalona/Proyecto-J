@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.nav-link{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #0d0d1a;
+    overflow-x: hidden;
+    padding-top: 30px;
+}
+
+.nav-link li a{
+    padding: 25px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    display: block;
+    text-align: justify;
+}
+
+.nav-link li a:hover{
+    font-weight: 700;
+    background-color: rgb(28, 28, 53);
+    color: #fff;
+}
+
+
+.logo img{
+    height: 100px;
+    margin-bottom: 80px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img:hover{
+    transform: scale(1.2);
+}
+
+.nav-link li a i {
+    padding-right: 10px;
+}
+
+.public{
+    margin-top: 3%;
+    margin-left: 30%;
+    position: fixed;
+    width: 50%;
+    height: 20%;
+}
+
+.public img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1600px){
+    .public{
+        width:  45%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1601px){
+    .public{
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media (min-width: 500px){
+    .public{
+        margin-left: 43%;
+    }
+}
+
+@media (min-width: 1400px){
+    .public{
+        margin-left: 37%;
+        width: 30%;
+    }
+}
+
+@media (min-width: 1900px){
+    .public{
+        margin-left: 25%;
+        width: 58%;
+        height: auto;
+    }
+}
+
+@media (min-width: 2200px){
+    .public{
+        margin-left: 33%;
+        width: 35%;
+        height: auto;
+    }
+}
+
+@media (max-height: 800px){
+    .public{
+        width: 30%;
+        height: auto;
+    }
+}
+
+.rama-img{
+    display: flex;
+    justify-content: end;
+}
+
+.rama-img img{
+    margin-top: 12%;
+    margin-right: 50px;
+    width: 25%;
+    height: auto;
+}

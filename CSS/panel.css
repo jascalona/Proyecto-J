@@ -1,0 +1,63 @@
+.title{
+    display: flex;
+    margin-left: 15%;
+    padding-top: 40px;
+}
+
+.title p{
+    font-size: 35px;
+    font-weight:300;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.title a{
+    text-decoration: none;
+    color: #0e0e24;
+}
+
+.list-container{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.list-container table tr td a{
+    text-decoration: none;
+    color: #0e0e24;
+}
+
+.list-container table tr {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-top: solid 1px #000;
+    font-size: 25px;
+    height: 70px;
+}
+
+table{
+    text-align: left;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+td{
+    padding: 20px;
+}
+
+tr:hover {
+    background-color: rgba(208, 208, 210, 0.303);
+}
+
+table i{
+    color: #0e0e24;
+    padding: 12px;
+}
+
+/*IMPORTACION*/
+
+.inport{
+    padding-top: 30pxs;
+    margin-left: 15%;
+}
