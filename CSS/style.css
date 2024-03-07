@@ -116,6 +116,12 @@
     }
 }
 
+@media (max-width: 1400px){
+    .public{
+        margin-left: 27%;
+    }
+}
+
 .rama-img{
     display: flex;
     justify-content: end;
@@ -128,11 +134,44 @@
     height: auto;
 }
 
+@media(max-width: 1200px){
+    .rama-img{
+        padding-top: 5%;
+    } 
+}
+
 .container-welcome{
     margin-left: 15%;
     margin-top: -24%;
-    border: solid 1px #00000022;
+    border: solid 1px #00000043;
     position: absolute;
-    padding: 20px;    
+    padding: 20px 100px;    
+}
 
+.container-welcome .welcome{
+    margin-left: -80px;
+}
+
+.container-welcome a{
+    font-size: 23px;
+    text-decoration: none;
+    color: #0d0d1a;
+}
+
+.container-welcome a i{
+    padding-right: 11px;
+}
+
+.container-welcome .info-empresa{
+    padding-top: 18px;
+    margin-left: 40px;
+    line-height: 27px;
+}
+
+.container-welcome h6{
+    font-size: 20px;
+}
+
+.container-welcome i{
+    font-size: 30px;
 }
