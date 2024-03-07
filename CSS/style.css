@@ -126,3 +126,8 @@
     width: 25%;
     height: auto;
 }
+
+.container-welcome{
+    display: flex;
+    justify-content: center;
+}
