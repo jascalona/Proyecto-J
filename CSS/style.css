@@ -54,14 +54,15 @@
 
 .public{
     margin-top: 3%;
-    margin-left: 30%;
+    margin-left: 40%;
     position: fixed;
-    width: 50%;
+    width: 10%;
     height: 20%;
 }
 
 .public img{
-    width: 100%;
+    margin-left: 18%;
+    width: 470px;
     height: 100%;
 }
 
@@ -128,6 +129,10 @@
 }
 
 .container-welcome{
-    display: flex;
-    justify-content: center;
+    margin-left: 15%;
+    margin-top: -24%;
+    border: solid 1px #00000022;
+    position: absolute;
+    padding: 20px;    
+
 }
