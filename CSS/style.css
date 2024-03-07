@@ -168,10 +168,18 @@
     line-height: 27px;
 }
 
+.container-welcome .info-empresa small{
+    font-size: 15px;
+}
+
 .container-welcome h6{
     font-size: 20px;
 }
 
 .container-welcome i{
     font-size: 30px;
+}
+
+.container-welcome .clientes small{
+    font-size: 15px;
 }
