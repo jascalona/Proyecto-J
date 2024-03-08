@@ -62,8 +62,8 @@
 
 .public img{
     margin-left: 18%;
-    width: 470px;
-    height: 100%;
+    width: 370px;
+    height: auto;
 }
 
 @media (max-width: 1600px){
@@ -130,7 +130,7 @@
 .rama-img img{
     margin-top: 12%;
     margin-right: 50px;
-    width: 25%;
+    width: 380px;
     height: auto;
 }
 
@@ -142,10 +142,10 @@
 
 .container-welcome{
     margin-left: 15%;
-    margin-top: -24%;
+    margin-top: -20%;
     border: solid 1px #00000043;
     position: absolute;
-    padding: 20px 100px;  
+    padding: 20px 80px;  
     cursor: pointer; 
     box-shadow: 8px 14px#b7b7bc2e; 
 }
@@ -163,10 +163,14 @@
     font-size: 23px;
     text-decoration: none;
     color: #0d0d1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-welcome a i{
     padding-right: 11px;
+    font-size: 30px;
 }
 
 .container-welcome .info-empresa{
