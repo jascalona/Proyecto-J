@@ -1,3 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-link{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #0d0d1a;
+    overflow-x: hidden;
+    padding-top: 30px;
+}
+
+.nav-link li a{
+    margin-left: -20px;
+    padding: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    text-align: justify;
+}
+
+.nav-link li a:hover{
+    font-weight: 700;
+    background-color: rgb(29, 29, 60);
+    color: #fff;
+}
+
+.logo img{
+    height: 100px;
+    margin-bottom: 80px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img:hover{
+    transform: scale(1.2);
+}
+
+.nav-link li a i{
+    padding-right: 10px;
+}
+
+
 .title{
     display: flex;
     margin-left: 15%;
@@ -40,6 +94,7 @@ table{
     text-align: left;
     border-collapse: collapse;
     width: 70%;
+    margin-top: -45px;
 }
 
 td{
@@ -58,6 +113,18 @@ table i{
 /*IMPORTACION*/
 
 .inport{
-    padding-top: 30pxs;
+    padding-top: 30px;
     margin-left: 15%;
 }
+
+
+.modal-global{
+    margin-left: 15%;
+    display: flex;
+    justify-content: initial;
+}
+
+.container-modal-file{
+    padding-left: 10px;
+}
+
