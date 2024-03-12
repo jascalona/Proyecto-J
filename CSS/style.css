@@ -194,3 +194,8 @@
 .container-welcome .clientes small{
     font-size: 15px;
 }
+
+.container-II{
+    display: flex;
+    justify-content: center;
+}
