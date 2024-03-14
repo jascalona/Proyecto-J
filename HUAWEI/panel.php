@@ -6,26 +6,27 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/panel.css">
     <link rel="icon" href="../IMG/logo.png">
     <title>HUAWEI</title>
 </head>
 <body>
     
-<!--
+
         <header class="header">
             <nav>
                 <ul class="nav-link">
                     <div class="logo">
-                        <img src="/IMG/jquery-logo-120 (1).png" alt="">
+                        <img src="../IMG/jquery-logo-120 (1).png" alt="">
                     </div>
-                    <li><a href="/index.html"><i class='bx bxs-widget'></i>Dashboard</a></li>
-                    <li><a href="/clientes.html"><i class='bx bxs-user'></i>Clientes</a></li>
-                    <li><a href="/report.html"><i class='bx bxs-report' ></i>Report</a></li>
-                    <li><a href="/devices.html"><i class='bx bxs-printer'></i>Devices</a></li>
-                    <li><a href="/counter.html"><i class='bx bx-slider-alt'></i>Counter</a></li>
-                    <li><a href="/DP.html"><i class='bx bxs-cog'></i>DP</a></li>
+                    <div style="margin-left: 10px; margin-top: -27%;" class="li-nav">
+                        <li><a href="/index.html"><i style="margin-top: 5px;" class='bx bxs-widget'></i>Dashboard</a></li>
+                        <li><a href="/clientes.html"><i style="margin-top: 5px;" class='bx bxs-user'></i>Clientes</a></li>
+                        <li><a href="/report.html"><i style="margin-top: 5px;" class='bx bxs-report' ></i>Report</a></li>
+                        <li><a href="/devices.html"><i style="margin-top: 5px;" class='bx bxs-printer'></i>Devices</a></li>
+                        <li><a href="/counter.html"><i style="margin-top: 5px;" class='bx bx-slider-alt'></i>Counter</a></li>
+                        <li><a href="/DP.html"><i style="margin-top: 5px;" class='bx bxs-cog'></i>DP</a></li>
+                    </div>
                 </ul>
             </nav>
         </header>
@@ -35,12 +36,12 @@
                 <a href=""><p>Cartas de Instalación<b>/</b>Desisntalación</p></a>
            </div>
 
-          -->
+          
 
        
         <?php
         include "modelo/conexion.php";
-        include "HUAWEI/controlador/cargaData.php";
+        include "controlador/cargaData.php";
         ?>
            <div style="margin-left: 250px;" class="container">
                 <form class="col-3" method="POST">
@@ -70,11 +71,11 @@
                         <input type="file" class="form-control" name="file" id="name" playaccept="file">
                     </div>
 
-                    <button type="submit" class="btn btn-primary" name="btnCargas" value="ok">Cargar Datos</button>
+                    <button type="submit" class="btn btn-primary" name="btnCarga" value="ok">Cargar Datos</button>
                 </form>
                 <br>
                 <br>
-                
+
 
                 <div class="col-8 p-4">
                     <table class="table">

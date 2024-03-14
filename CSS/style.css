@@ -5,7 +5,6 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
 .nav-link{
     height: 100%;
     width: 200px;
@@ -48,7 +47,7 @@
     transform: scale(1.2);
 }
 
-.nav-link li a i {
+.nav-ul li a i {
     padding-right: 10px;
 }
 
