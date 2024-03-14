@@ -43,32 +43,32 @@
         include "modelo/conexion.php";
         include "controlador/cargaData.php";
         ?>
-           <div style="margin-left: 250px;" class="container">
+           <div style="margin-left: 200px; margin-top: 80px;" class="container">
                 <form class="col-3" method="POST">
 
                     <div class="mb-3">
                         <label for="serial" class="form-label">SERIAL</label>
-                        <input type="text" class="form-control" name="serial" id="serial" placeholder="Serial">
+                        <input type="text" class="form-control" name="serial" id="serial" required placeholder="Serial">
                     </div>
 
                     <div class="mb-3">
                         <label for="modelo" class="form-label">Modelo</label>    
-                        <input type="text" class="form-control" name="modelo" id="modelo" placeholder="Modelo">
+                        <input type="text" class="form-control" name="modelo" id="modelo" required placeholder="Modelo">
                     </div>
 
                     <div class="mb-3">
                         <label for="location" class="form-label">Localidad</label>
-                        <input type="text" class="form-control" name="location" id="location" placeholder="Localidad">
+                        <input type="text" class="form-control" name="location" id="location" required placeholder="Localidad">
                     </div>
 
                     <div class="mb-3">
                         <label for="date" class="form-label">Fecha</label>
-                        <input type="date" name="date" id="date" placeholder="Fecha de Carga">
+                        <input type="date" name="date" id="date" required placeholder="Fecha de Carga">
                     </div>
 
                     <div class="mb-3">
                         <label for="file" class="form-label">Archivo</label>
-                        <input type="file" class="form-control" name="file" id="name" playaccept="file">
+                        <input type="file" class="form-control" name="file" id="name" required playaccept="file">
                     </div>
 
                     <button type="submit" class="btn btn-primary" name="btnCarga" value="ok">Cargar Datos</button>
