@@ -13,6 +13,7 @@
 </head>
 <body>
     
+<!--
         <header class="header">
             <nav>
                 <ul class="nav-link">
@@ -34,11 +35,13 @@
                 <a href=""><p>Cartas de Instalación<b>/</b>Desisntalación</p></a>
            </div>
 
-           <?php
-           include 'conexionPhp/connect.php';
-           include 'HUAWEI/controlador/cargaData.php';   
-           ?>
+          -->
 
+       
+        <?php
+        include "modelo/conexion.php";
+        include "HUAWEI/controlador/cargaData.php";
+        ?>
            <div style="margin-left: 250px;" class="container">
                 <form class="col-3" method="POST">
 
@@ -68,8 +71,10 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary" name="btnCargas" value="ok">Cargar Datos</button>
-                    
                 </form>
+                <br>
+                <br>
+                
 
                 <div class="col-8 p-4">
                     <table class="table">
@@ -85,10 +90,9 @@
                             <th class="col"></th>
                         </tr>
                     </thead>
-
                     <tbody>
                         <?php
-                        include 'conexionPhp/connect.php';
+                        include "modelo/conexion.php";
                         $sql=$conexion->query( "select *from huawei" );
                         while($datos = $sql->fetch_object()){ ?>
                     
