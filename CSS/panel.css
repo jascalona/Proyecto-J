@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .nav-link{
@@ -59,9 +59,13 @@
 }
 
 .title p{
-    font-size: 35px;
+    font-size: 45px;
     font-weight:300;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.title p b p{
+    color: brown;
 }
 
 .title a{
@@ -128,9 +132,30 @@ table i{
     padding-left: 10px;
 }
 
-.container-vistas{
-    margin-top: -26%;
-    position: relative;
-    display: flex;
-    justify-content: end;
+.container .container-vistas {
+    position: absolute;
+ 
 }
+table{
+    margin-left: 20px;
+}
+
+.home-logo img{
+    height: 45px;
+    width: auto;
+    margin-top: -100px;
+    margin-left: 8px;
+}
+
+.xeroxWork {
+    position: absolute;
+    display: flex;
+    margin-top: -30%;
+    margin-left: 52%;
+    height: 190px;
+}
+
+body{
+    background: #0e0e243b;
+}
+

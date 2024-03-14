@@ -6,7 +6,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://localhost/proyecto-j/CSS/panel.css">
+    <link rel="stylesheet" href="../CSS/panel.css">
     <link rel="icon" href="../IMG/logo.png">
     <title>HUAWEI</title>
 </head>
@@ -33,36 +33,37 @@
 
 
            <div class="title">
-                <a href=""><p>Cartas de Instalación<b>/</b>Desisntalación</p></a>
+                <a href=""><p>Cartas de Instalación/Desinstalacion</p></a>
            </div>
 
-          
+           
 
-       
         <?php
         include "modelo/conexion.php";
         include "controlador/cargaData.php";
         ?>
-           <div style="margin-left: 210px; margin-top: 80px;" class="container">
+           <div style="margin-left: 210px; margin-top: 80px; font-size: 18px;" class="container">
                 <form class="col-3" method="POST">
 
+                <div class="home-logo">
+                    <img src="../IMG/XeroxLogo.png" alt="">
+                </div>
+                
+                <div class="inputs">
                     <div class="mb-3">
-                        <label for="serial" class="form-label">SERIAL</label>
                         <input type="text" class="form-control" name="serial" id="serial" required placeholder="Serial">
                     </div>
 
                     <div class="mb-3">
-                        <label for="modelo" class="form-label">Modelo</label>    
                         <input type="text" class="form-control" name="modelo" id="modelo" required placeholder="Modelo">
                     </div>
 
                     <div class="mb-3">
-                        <label for="location" class="form-label">Localidad</label>
                         <input type="text" class="form-control" name="location" id="location" required placeholder="Localidad">
                     </div>
 
                     <div class="mb-3">
-                        <label for="date" class="form-label">Fecha</label>
+                        <label for="date" class="form-label">Fecha</label><br>
                         <input type="date" name="date" id="date" required placeholder="Fecha de Carga">
                     </div>
 
@@ -70,15 +71,14 @@
                         <label for="file" class="form-label">Archivo</label>
                         <input type="file" class="form-control" name="file" id="name" required playaccept="file">
                     </div>
-
-                    <button type="submit" class="btn btn-primary" name="btnCarga" value="ok">Cargar Datos</button>
+                    <br>
+                    <button style="margin-bottom: 25%;" type="submit" class="btn btn-primary" name="btnCarga" value="ok">Cargar Datos</button>
                 </form>
-                <br>
-                <br>
-            </div>
+                
+            
 
             <div class="container-vistas">
-                <div class="col-8 p-4">
+                <div class="col-12">
                     <table class="table">
 
                     <thead class="bg-info">
@@ -121,10 +121,13 @@
                 </div>
                 </div>
             </div>
-
+        </div>
 
 
            
+        <div class="xeroxWork">
+                <img src="../IMG/xer.jpeg" alt="">
+        </div>
 
 
 
@@ -138,7 +141,9 @@
 
 
 
-
+<br>
+<br>
+<br>
 
 
 

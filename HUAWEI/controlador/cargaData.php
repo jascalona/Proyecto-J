@@ -11,13 +11,13 @@ if (!empty($_POST['btnCarga'])) {
 
         $sql = $conexion->query(" insert into huawei(serial,modelo,location,date,file)values('$serial','$modelo','$location','$date','$file')");
         if ($sql==1) {
-            echo '<div style="margin-left: 207px; position: absolute;" class="alert alert-success">LA CARGA SE REALIZO CORRECTAMENTE</div>';
+            echo '<div style="margin-left: 470px; position: absolute;" class="alert alert-success">LA CARGA SE REALIZO CORRECTAMENTE</div>';
         } else {
-            echo '<div style="margin-left: 207px; position: absolute;" class="alert alert-danger">ERROR DE CONEXION COD: 10231514</div>';
+            echo '<div style="margin-left: 470px; position: absolute;" class="alert alert-danger">ERROR DE CONEXION COD: 10231514</div>';
         }
         
     } else{
-        echo '<div style="margin-left: 207px; position: absolute;" class="alert alert-warning">DEBE LLENAR LOS CAMPOS VACIOS</div>';
+        echo '<div style="margin-left: 470px; position: absolute;" class="alert alert-warning">DEBE LLENAR LOS CAMPOS VACIOS</div>';
     }
 
 }
