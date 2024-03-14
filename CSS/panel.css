@@ -128,3 +128,9 @@ table i{
     padding-left: 10px;
 }
 
+.container-vistas{
+    margin-top: -26%;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}

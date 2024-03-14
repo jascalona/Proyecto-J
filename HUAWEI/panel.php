@@ -6,7 +6,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/panel.css">
+    <link rel="stylesheet" href="http://localhost/proyecto-j/CSS/panel.css">
     <link rel="icon" href="../IMG/logo.png">
     <title>HUAWEI</title>
 </head>
@@ -43,7 +43,7 @@
         include "modelo/conexion.php";
         include "controlador/cargaData.php";
         ?>
-           <div style="margin-left: 200px; margin-top: 80px;" class="container">
+           <div style="margin-left: 210px; margin-top: 80px;" class="container">
                 <form class="col-3" method="POST">
 
                     <div class="mb-3">
@@ -75,8 +75,9 @@
                 </form>
                 <br>
                 <br>
+            </div>
 
-
+            <div class="container-vistas">
                 <div class="col-8 p-4">
                     <table class="table">
 
@@ -117,6 +118,7 @@
 
                     </tbody>
                 </table>
+                </div>
                 </div>
             </div>
 
