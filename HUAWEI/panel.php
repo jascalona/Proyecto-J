@@ -19,6 +19,8 @@
                     <div class="logo">
                         <img src="../IMG/jquery-logo-120 (1).png" alt="">
                     </div>
+                    <br>
+                    <br>
                     <div style="margin-left: 10px; margin-top: -27%;" class="li-nav">
                         <li><a href="../index.html"><i style="margin-top: 5px;" class='bx bxs-widget'></i>Dashboard</a></li>
                         <li><a href="/clientes.html"><i style="margin-top: 5px;" class='bx bxs-user'></i>Clientes</a></li>
