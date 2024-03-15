@@ -12,7 +12,7 @@
 </head>
 <body>
     
-<!--
+
         <header class="header">
             <nav>
                 <ul class="nav-link">
@@ -35,7 +35,7 @@
 
            <div class="title">
                 <a href=""><p>Cartas de Instalación/Desinstalacion</p></a>
-           </div>-->
+           </div>
 
         <?php
         include "modelo/conexion.php";
@@ -81,11 +81,12 @@
             
 
             <div class="container-vistas">
-                <div class="col-12">
+               <!-- <div class="col-25"> -->
                     <table class="table">
 
                     <thead class="bg-info">
                         <tr>
+                            <th class="col">id</th> 
                             <th class="col">Serial</th>
                             <th class="col">Modelo</th>
                             <th class="col">Localidad</th>
@@ -102,6 +103,7 @@
                         while($datos = $sql->fetch_object()){ ?>
                     
                         <tr>
+                            <td><?= $datos->id?></td>
                             <td><?= $datos->serial?></td>
                             <td><?= $datos->modelo?></td>
                             <td><?= $datos->location?></td>
@@ -112,7 +114,7 @@
                             </td>
 
                             <td>
-                                <a href="panel.php?id=<?= $datos->serial?>"><i class='bx bx-x-circle'></i></a>
+                                <a href="panel.php?id=<?= $datos->id?>"><i class='bx bx-x-circle'></i></a>
                             </td>
                         </tr>
                         <?php
