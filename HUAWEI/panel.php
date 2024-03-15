@@ -12,7 +12,7 @@
 </head>
 <body>
     
-
+<!--
         <header class="header">
             <nav>
                 <ul class="nav-link">
@@ -35,12 +35,14 @@
 
            <div class="title">
                 <a href=""><p>Cartas de Instalación/Desinstalacion</p></a>
-           </div>
-
-           
+           </div>-->
 
         <?php
         include "modelo/conexion.php";
+        include "controlador/delete.php";
+        ?>
+
+        <?php
         include "controlador/cargaData.php";
         ?>
            <div style="margin-left: 210px; margin-top: 80px; font-size: 18px;" class="container">
@@ -110,7 +112,7 @@
                             </td>
 
                             <td>
-                                <a href="#"><i class='bx bx-x-circle'></i></a>
+                                <a href="panel.php?serial=<?= $datos->serial?>"><i class='bx bx-x-circle'></i></a>
                             </td>
                         </tr>
                         <?php
