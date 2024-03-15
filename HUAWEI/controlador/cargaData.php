@@ -17,7 +17,7 @@ if (!empty($_POST['btnCarga'])) {
         }
         
     } else{
-        echo '<div style="margin-left: 470px; position: absolute;" class="alert alert-warning">DEBE LLENAR LOS CAMPOS VACIOS</div>';
+        echo '<div style="margin-left: 207px; position: absolute;" class="alert alert-warning">DEBE LLENAR LOS CAMPOS VACIOS</div>';
     }
 
 }
