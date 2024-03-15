@@ -10,7 +10,7 @@
     <link rel="icon" href="../IMG/logo.png">
     <title>ListParts</title>
 </head>
-<body>
+<body style="background: #f3f3f3;">
     
 
         <header class="header">
@@ -44,7 +44,7 @@
             ?>
 
 
-           <div style="margin-left: 210px; margin-top: 80px; font-size: 18px;" class="container">
+           <div style="margin-left: 190px; margin-top: 80px; font-size: 18px;" class="container">
                 <form class="col-3" method="POST">
            <div class="container-vistas">
                <!-- <div class="col-25"> -->
@@ -52,10 +52,12 @@
 
                     <thead class="bg-info">
                         <tr>
-                            <th class="col">PartNumber</th> 
+                            <th class="col">PartNumber</th>
+                            <th class="col">E/A/S</th> 
                             <th class="col">Model</th>
+                            <th class="col">Segment</th>
+                            <th class="col">Mono/Color</th>
                             <th class="col">Description</th>
-                            <th class="col">volume</th>
                             <th class="col">Performance</th>
                             <th class="col">Region</th>
                         </tr>
@@ -68,9 +70,11 @@
                     
                         <tr>
                             <td><?= $datos->PartN?></td>
+                            <td><?= $datos->EAS?></td>
                             <td><?= $datos->Model?></td>
+                            <td><?= $datos->SeG?></td>                       
+                            <td><?= $datos->Mo_Co?></td>
                             <td><?= $datos->DesC?></td>
-                            <td><?= $datos->Vol?></td>
                             <td><?= $datos->PerF?></td>
                             <td><?= $datos->Region?></td>
                         </tr>

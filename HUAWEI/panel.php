@@ -10,7 +10,7 @@
     <link rel="icon" href="../IMG/logo.png">
     <title>HUAWEI</title>
 </head>
-<body>
+<body style="background: #f3f3f3;">
     
 
         <header class="header">
