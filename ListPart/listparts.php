@@ -37,8 +37,15 @@
                 <a href=""><p>ListPart</p></a>
            </div>
 
+            <?php
+            include '../ListPart/modelo/conexion.php';
+            include '../ListPart/controlador/vistaData.php';
+            
+            ?>
 
-         
+
+           <div style="margin-left: 210px; margin-top: 80px; font-size: 18px;" class="container">
+                <form class="col-3" method="POST">
            <div class="container-vistas">
                <!-- <div class="col-25"> -->
                     <table class="table">
@@ -50,16 +57,13 @@
                             <th class="col">Description</th>
                             <th class="col">volume</th>
                             <th class="col">Performance</th>
-                            <th class="col">Date</th>
-                            <th class="col">File</th>
                             <th class="col">Region</th>
-                            <th class="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                         include "modelo/conexion.php";
-                        $sql=$conexion->query( "select *from huawei" );
+                        $sql=$conexion->query( "select *from listpart" );
                         while($datos = $sql->fetch_object()){ ?>
                     
                         <tr>
@@ -69,14 +73,6 @@
                             <td><?= $datos->Vol?></td>
                             <td><?= $datos->PerF?></td>
                             <td><?= $datos->Region?></td>
-                            <td><?= $datos->file?></td>
-                            <td>
-                                <a href="#"><i class='bx bx-envelope-open'></i></a>
-                            </td>
-
-                            <td>
-                                <a href="panel.php?id=<?= $datos->id?>"><i class='bx bx-x-circle'></i></a>
-                            </td>
                         </tr>
                         <?php
                         }
@@ -84,7 +80,8 @@
 
                     </tbody>
                 </table>
-                </div>
+            </div>
+            </div>
      
 
 
