@@ -112,7 +112,7 @@
                             </td>
 
                             <td>
-                                <a href="panel.php?serial=<?= $datos->serial?>"><i class='bx bx-x-circle'></i></a>
+                                <a href="panel.php?id=<?= $datos->serial?>"><i class='bx bx-x-circle'></i></a>
                             </td>
                         </tr>
                         <?php

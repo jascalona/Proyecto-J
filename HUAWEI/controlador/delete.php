@@ -1,8 +1,8 @@
 <?php
 
-if (!empty($_GET["serial"])) {
-    $serial=$_GET["serial"];
-    $sql=$conexion->query(" delete from huawei serial=$serial ");
+if (!empty($_GET["id"])) {
+    $id=$_GET["id"];
+    $sql=$conexion->query(" delete from huawei where serial=$id ");
     if ($sql==1) {
         echo '<div>SE HA ELIMINADO EL CAMPO</div>';
     } else {
