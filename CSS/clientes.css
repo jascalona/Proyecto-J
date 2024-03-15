@@ -199,3 +199,89 @@ section{
     }
 }
 
+
+/*REPORTES-HTML*/
+
+
+.container-report{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.report{
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    width: 400px;
+    height: 280px;
+}
+
+.report:hover{
+    transform: scale(1.2);
+}
+
+.report img{
+    width: 200px;
+    height: 200px;
+}
+
+.report a{
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+.report a p{
+    color: #0d0d1a;
+    font-size: 20px;
+}
+
+.lin{
+    margin-top: 15px;
+    margin-bottom: 1px;
+    border-top: solid 1px #0d0d1a25;
+    margin-left: 1px;
+    margin-right: 90px; 
+}
+
+.link{
+    padding-top: 1px;
+}
+
+.link a{
+    color: #0707a2;
+    margin-left: 16px;
+}
+
+@media (min-width: 1546px){
+    .container-report{
+        margin-left: 9%;
+    }
+}
+
+@media (max-width: 1540px){
+    .container-report{
+        margin-left: 14%;
+    }
+
+    .container-report .report{
+        width: 340px;
+        height: 230px;
+    }
+}
+
+@media (max-width: 1235px){
+    .container-report .report{
+        margin-left: 4%;
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width:1100px){
+    .container-report{
+        margin-left: 37%;
+        flex-direction: column;
+    }
+}
