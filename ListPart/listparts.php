@@ -13,7 +13,7 @@
 </head>
 <body style="background: #f3f3f3;">
     
-
+<!--
         <header class="header">
             <nav>
                 <ul class="nav-link">
@@ -32,6 +32,7 @@
                 </ul>
             </nav>
         </header>
+        -->
 
 
            <div class="title">
@@ -59,10 +60,10 @@
             if(isset($_GET['filter'])) {
                 $busqueda = $_GET['busqueda'];
 
-                $consulta = $con->query(" select * from listpart where PartN like '%$busqueda' ");
+                $consulta = $con->query(" select * from listpart where PartN like '%$busqueda%' ");
                 
                 while ($row = $consulta->fetch_array()) {
-                    echo $row['listpart'];
+                    echo $row['listpart'].'<br>';
                 }
             }
             
