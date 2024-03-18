@@ -45,10 +45,22 @@
             </div>
 
 
-            <form action="" method-"POST">
-                <label for="campo">Buscar:</label>
-                <input type="text" name="campo" id="campo">
-            </form>
+            <?php
+            include "../listpart/modelo/conexion.php";
+            include "../ListPart/controlador/filter.php";
+            ?>
+            <div class="col-lg-3 col-6 text-left">
+                <form action="" method="GET">
+                    <div class="input-group">
+                        <input type="text" name="busqueda" id="filter" class="form-control" placeholder="Filtrar Producto...">
+                        <input type="submit" name="enviar" value="Filtrar">
+                        <div class="input-group-append">
+                        </div>
+                    </div>
+                </form>
+
+            
+            </div>
           
 
 
