@@ -19,14 +19,14 @@
                     <div class="logo">
                         <img src="../IMG/jquery-logo-120 (1).png" alt="">
                     </div>
-                  >
+                  
                     <div style="margin-left: 18px; margin-top: -10%;" class="li-nav">
                         <li><a href="../index.html"><i style="margin-top: 5px;" class='bx bxs-widget'></i>Dashboard</a></li>
                         <li><a href="../clientes.html"><i style="margin-top: 5px;" class='bx bxs-user'></i>Clientes</a></li>
                         <li><a href="../report.html"><i style="margin-top: 5px;" class='bx bxs-report' ></i>Report</a></li>
                         <li><a href="../devices.html"><i style="margin-top: 5px;" class='bx bxs-printer'></i>Devices</a></li>
                         <li><a href="../counter.html"><i style="margin-top: 5px;" class='bx bx-slider-alt'></i>Counter</a></li>
-                        <li><a href="../DP.html"><i style="margin-top: 5px;" class='bx bxs-cog'></i>DP</a></li>
+                        <li><a href="../DP.html"><i style="margin-top: 5px;" class='bx bxs-cog'></i>ListParts</a></li>
                     </div>
                 </ul>
             </nav>
@@ -44,11 +44,11 @@
             ?>
 
 
-           <div style="margin-left: 190px; margin-top: 80px; font-size: 18px;" class="container">
+           <div style="margin-left: 180px; margin-top: 80px; font-size: 17px;" class="container">
                 <form class="col-3" method="POST">
            <div class="container-vistas">
                <!-- <div class="col-25"> -->
-                    <table class="table">
+                    <table class="table table-bordered">
 
                     <thead class="bg-info">
                         <tr>
@@ -86,7 +86,6 @@
                 </table>
             </div>
             </div>
-     
 
 
 
