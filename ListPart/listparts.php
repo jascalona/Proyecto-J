@@ -45,34 +45,28 @@
             </div>
 
 
+            <?php
+            include "../listpart/modelo/conexion.php";
+            include "../ListPart/controlador/filter.php";
+            ?>
             <div class="col-lg-3 col-6 text-left">
                 <form action="" method="GET">
                     <div class="input-group">
-                        <input type="text" name="busqueda" class="form-control" placeholder="Filtrar Producto...">
-                        <input type="submit" name="filter" value="Filtrar">
+                        <input type="text" name="busqueda" id="filter" class="form-control" placeholder="Filtrar Producto...">
+                        <input type="submit" name="enviar" value="Filtrar">
                         <div class="input-group-append">
                         </div>
                     </div>
                 </form>
+
+            
             </div>
           
-            <?php
-            if(isset($_GET['filter'])) {
-                $busqueda = $_GET['busqueda'];
-
-                $consulta = $con->query(" select * from listpart where PartN like '%$busqueda%' ");
-                
-                while ($row = $consulta->fetch_array()) {
-                    echo $row['listpart'].'<br>';
-                }
-            }
-            
-            ?>
 
 
 
             <?php
-            include '../ListPart/modelo/conexion.php';
+           // include '../ListPart/modelo/conexion.php';
             include '../ListPart/controlador/vistaData.php';
             
             ?>
