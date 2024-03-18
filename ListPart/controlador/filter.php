@@ -1,26 +1,38 @@
 <?php
 
-/**
- * Script para cargar datos de lado del servidor con PHP y MySQL
- *
- * @author mroblesdev
- * @link https://github.com/mroblesdev/server-side-php
- * @license: MIT
- */
+require '../modelo/conexion.php';
 
-require 'config.php';
+$columns = ['PartN', 'EAS', 'Model', 'SeG', 'Mo_Co', 'DesC', 'PerF', 'Region'];
+$table = "listpart";
 
-// Columnas a mostrar en la tabla
-$columns = ['no_emp', 'nombre', 'apellido', 'fecha_nacimiento', 'fecha_ingreso'];
+$campo = isset($_POST['campo']) ? $conexion->real_escape_string($_POST['campo']) : null;
 
-// Nombre de la tabla
-$table = "empleados";
+$sql = " SELECT  " . implode(",", $columns)."
+FROM $table";
+$resultado = $conexion->query($sql);
+$num_rows = $resultado->num_rows;
 
-// Clave principal de la tabla
-$id = 'no_emp';
+$html = '';
 
-// Campo a buscar
-$campo = isset($_POST['campo']) ? $conn->real_escape_string($_POST['campo']) : null;
+if($num_rows > 0) {
+    while($row = $resultado->fetch_assoc()) {
+        $html .= '<tr>';
+        $html .= '<td>'.$rows['PartN'].'</td>';
+        $html .= '<td>'.$rows['EAS'].'</td>';
+        $html .= '<td>'.$rows['Model'].'</td>';
+        $html .= '<td>'.$rows['SeG'].'</td>';
+        $html .= '<td>'.$rows['Mo_Co'].'</td>';
+        $html .= '<td>'.$rows['DesC'].'</td>';
+        $html .= '<td>'.$rows['PerF'].'</td>';
+        $html .= '<td>'.$rows['Region'].'</td>';
+        $html .= '</tr>';
+
+    }
+}   else{
+    $html .= '<tr>';
+    $html .= '<th>';
+    $html .= '</tr>';
+}
 
 // Filtrado
 $where = '';
@@ -28,7 +40,7 @@ $where = '';
 if ($campo != null) {
     $where = "WHERE (";
 
-    $cont = count($columns);
+    $conexion = count($columns);
     for ($i = 0; $i < $cont; $i++) {
         $where .= $columns[$i] . " LIKE '%" . $campo . "%' OR ";
     }
@@ -37,8 +49,8 @@ if ($campo != null) {
 }
 
 // Limites
-$limit = isset($_POST['registros']) ? $conn->real_escape_string($_POST['registros']) : 10;
-$pagina = isset($_POST['pagina']) ? $conn->real_escape_string($_POST['pagina']) : 0;
+$limit = isset($_POST['registros']) ? $conexion->real_escape_string($_POST['registros']) : 10;
+$pagina = isset($_POST['pagina']) ? $conexion->real_escape_string($_POST['pagina']) : 0;
 
 if (!$pagina) {
     $inicio = 0;
@@ -65,18 +77,18 @@ FROM $table
 $where
 $sOrder
 $sLimit";
-$resultado = $conn->query($sql);
+$resultado = $conexion->query($sql);
 $num_rows = $resultado->num_rows;
 
 // Consulta para total de registro filtrados
 $sqlFiltro = "SELECT FOUND_ROWS()";
-$resFiltro = $conn->query($sqlFiltro);
+$resFiltro = $conexion->query($sqlFiltro);
 $row_filtro = $resFiltro->fetch_array();
 $totalFiltro = $row_filtro[0];
 
 // Consulta para total de registro
 $sqlTotal = "SELECT count($id) FROM $table ";
-$resTotal = $conn->query($sqlTotal);
+$resTotal = $conexion->query($sqlTotal);
 $row_total = $resTotal->fetch_array();
 $totalRegistros = $row_total[0];
 
@@ -90,13 +102,14 @@ $output['paginacion'] = '';
 if ($num_rows > 0) {
     while ($row = $resultado->fetch_assoc()) {
         $output['data'] .= '<tr>';
-        $output['data'] .= '<td>' . $row['no_emp'] . '</td>';
-        $output['data'] .= '<td>' . $row['nombre'] . '</td>';
-        $output['data'] .= '<td>' . $row['apellido'] . '</td>';
-        $output['data'] .= '<td>' . $row['fecha_nacimiento'] . '</td>';
-        $output['data'] .= '<td>' . $row['fecha_ingreso'] . '</td>';
-        $output['data'] .= '<td><a class="btn btn-warning btn-sm" href="editar.php?id=' . $row['no_emp'] . '">Editar</a></td>';
-        $output['data'] .= "<td><a class='btn btn-danger btn-sm' href='elimiar.php?id=" . $row['no_emp'] . "'>Eliminar</a></td>";
+        $output['data'] .= '<td>' . $row['PartN'] . '</td>';
+        $output['data'] .= '<td>' . $row['EAS'] . '</td>';
+        $output['data'] .= '<td>' . $row['Model'] . '</td>';
+        $output['data'] .= '<td>' . $row['SeG'] . '</td>';
+        $output['data'] .= '<td>' . $row['Mo_Co'] . '</td>';
+        $output['data'] .= '<td>' . $row['DesC'] . '</td>';
+        $output['data'] .= '<td>' . $row['PerF'] . '</td>';
+        $output['data'] .= '<td>' . $row['Region'] . '</td>';
         $output['data'] .= '</tr>';
     }
 } else {

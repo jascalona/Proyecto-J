@@ -32,7 +32,7 @@
                     <input type="text" name="campo" id="campo" class="form-control">
                 </div>
             </div>
-            
+
 <br>
 <br>
 <br>
@@ -41,16 +41,16 @@
                 <div class="col">
                     <table class="table table-sm table-bordered table-striped">
                         <thead>
-                            <th class="sort asc">Num. empleado</th>
-                            <th class="sort asc">Nombre</th>
-                            <th class="sort asc">Apellido</th>
-                            <th class="sort asc">Fecha nacimiento</th>
-                            <th class="sort asc">Fecha ingreso</th>
-                            <th></th>
-                            <th></th>
+                            <th class="sort asc">PartN</th>
+                            <th class="sort asc">EAS</th>
+                            <th class="sort asc">Model</th>
+                            <th class="sort asc">SeG</th>
+                            <th class="sort asc">Mo_Co</th>
+                            <th class="sort asc">DesC</th>
+                            <th class="sort asc">PerF</th>
+                            <th class="sort asc">Region</th>
                         </thead>
 
-                        <!-- El id del cuerpo de la tabla. -->
                         <tbody id="content">
 
                         </tbody>
