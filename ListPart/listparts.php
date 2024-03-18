@@ -6,18 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Marco Robles">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="http://localhost/proyecto-j/CSS/style.css">
     <link rel="stylesheet" href="http://localhost/proyecto-j/CSS/panel.css">
     <link rel="icon" href="http://localhost/proyecto-j/IMG/logo.png">
+    <link rel="stylesheet" href="../ListPart/css/framework.css">
     <title>ListPart</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-</head>
-
-
-<body>
+    </head>
+    <body>
             <header class="header">
                     <nav>
                         <ul class="nav-link">
@@ -38,7 +37,9 @@
 
     <main>
         <div class="container py-4 text-center">
-            <h2>ListPart</h2>
+            <h2 style="margin-top: 20px;">ListPart</h2>
+
+          
 
             <div class="row g-4">
 
@@ -47,9 +48,9 @@
                 <div class="col-6 col-md-1 text-end">
                     <label for="campo" class="col-form-label">Buscar: </label>
                 </div>
-                <div class="col-6 col-md-3 text-end">
-                    <input type="text" name="campo" id="campo" class="form-control">
-                    <button type="submit" name-"enviar">Filtrar</button>
+                <div style="display: flex;" class="col-6 col-md-3 text-end">
+                    <input style="border: 1px solid; border-radius: 5px;" type="text" name="campo" id="campo" class="form-control">
+                    <button type="submit" name="enviar">Filtrar</button>
                 </div>
             </div>
             <br>
