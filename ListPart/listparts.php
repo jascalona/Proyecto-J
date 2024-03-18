@@ -45,17 +45,29 @@
 
 
             <div class="col-lg-3 col-6 text-left">
-                <form action="" method="POST">
+                <form action="" method="GET">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Filtrar Producto...">
+                        <input type="text" name="busqueda" class="form-control" placeholder="Filtrar Producto...">
+                        <input type="submit" name="filter" value="Filtrar">
                         <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                            <button type="submit"><i class='bx bx-search-alt'></i></button>                            </span>
                         </div>
                     </div>
                 </form>
             </div>
           
+            <?php
+            if(isset($_GET['filter'])) {
+                $busqueda = $_GET['busqueda'];
+
+                $consulta = $con->query(" select * from listpart where PartN like '%$busqueda' ");
+                
+                while ($row = $consulta->fetch_array()) {
+                    echo $row['listpart'];
+                }
+            }
+            
+            ?>
+
 
 
             <?php
@@ -77,9 +89,9 @@
                             <th class="col">E/A/S</th> 
                             <th class="col">Model</th>
                             <th class="col">Segment</th>
-                            <th class="col">Mono/Color</th>
+                            <th class="col">Mo/Co</th>
                             <th class="col">Description</th>
-                            <th class="col">Performance</th>
+                            <th class="col">Yield</th>
                             <th class="col">Region</th>
                         </tr>
                     </thead>
