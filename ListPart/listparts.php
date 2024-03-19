@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="http://localhost/proyecto-j/CSS/style.css">
     <link rel="stylesheet" href="http://localhost/proyecto-j/CSS/panel.css">
     <link rel="icon" href="http://localhost/proyecto-j/IMG/logo.png">
+    <link rel="stylesheet" href="..//ListPart/css/busqueda.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
     <link rel="stylesheet" href="../ListPart/css/framework.css">
@@ -41,14 +42,14 @@
                 <div class="container is-fluid" style="margin-left: 215px;" >
                     <div class="container-fluid">
                     <form class="d-flex">
-                    <form action="" method="GET">
-                    <input class="form-control me-2" type="search" placeholder="Buscar Producto" 
-                    name="busqueda"> <br>
-                    
-
-                    <button class="btn btn-outline-info" type="submit" name="enviar"> <b>Buscar </b> </button> 
-                    </form>
+                        <form action="" method="GET">
+                            <div class="input">
+                                <input class="form-control me-2" type="search" placeholder="Buscar Producto" name="busqueda"> <br>
+                            </div>
+                                <button  type="submit" name="enviar"> <b>Buscar </b> </button> 
+                        </form>
                     </div>
+
                     <?php
                     $conexion=mysqli_connect("localhost","root","","pj"); 
                     $where="";
@@ -64,8 +65,6 @@
                     }
 
                     }
-
-
                     ?>
                     <br>
 
@@ -81,9 +80,7 @@
                     JS-->
                     
                     <br>
-
-
-                    <table class="table table-striped table-dark table_id ">
+                    <table style="margin-top: 70px;" class="table table-striped table-dark table_id ">
 
                         
                         <thead>    

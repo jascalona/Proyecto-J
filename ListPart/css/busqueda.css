@@ -1,9 +1,25 @@
-.container-fluid input{
-    margin-top: 30px;
+.container-fluid .input input{
+    margin-top: 20px;
+}
+
+.container-fluid .input{
+    position: absolute;
     border: solid 1px;
-    padding: 10px;
 }
 
 .container-fluid button{
-    
+    background-color: brown;
+    padding: 10px;
+    position: absolute;
+    border: 0;
+    top: 0;
+    right: 0;
+    border-radius: 16px;
+    color: #fff;
+    cursor: pointer;
 }
+
+.button_bar:hover{
+    background-color: #676767;
+}
+
