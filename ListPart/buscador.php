@@ -1,121 +1,154 @@
 <?php
 
-require '..//ListPart/modelo/conexion.php';
+session_start();
+error_reporting(0);
 
-// Columnas a mostrar en la tabla
-$columns = ['PartN', 'EAS', 'Model', 'SeG', 'Mo_Co', 'DesC', 'PerF', 'Region'];
+$validar = $_SESSION['nombre'];
 
-// Nombre de la tabla
-$table = "listpart";
+if( $validar == null || $validar = ''){
 
-// Clave principal de la tabla
-$id = 'PartN';
-
-// Campo a buscar
-$campo = isset($_POST['campo']) ? $conexion->real_escape_string($_POST['campo']) : null;
-
-// Filtrado
-$where = '';
-
-if ($campo != null) {
-    $where = "WHERE (";
-
-    $conexion = count($columns);
-    for ($i = 0; $i < $cont; $i++) {
-        $where .= $columns[$i] . " LIKE '%" . $campo . "%' OR ";
-    }
-    $where = substr_replace($where, "", -3);
-    $where .= ")";
+  header("Location: ../includes/login.php");
+  die();
+  
 }
 
-// Limites
-$limit = isset($_POST['registros']) ? $conexion->real_escape_string($_POST['registros']) : 10;
-$pagina = isset($_POST['pagina']) ? $conexion->real_escape_string($_POST['pagina']) : 0;
 
-if (!$pagina) {
-    $inicio = 0;
-    $pagina = 1;
-} else {
-    $inicio = ($pagina - 1) * $limit;
-}
+?>
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Usuarios</title>
+</head>
+<br>
+<div class="container is-fluid">
 
-$sLimit = "LIMIT $inicio , $limit";
 
-// Ordenamiento
 
-$sOrder = "";
-if (isset($_POST['orderCol'])) {
-    $orderCol = $_POST['orderCol'];
-    $oderType = isset($_POST['orderType']) ? $_POST['orderType'] : 'asc';
 
-    $sOrder = "ORDER BY " . $columns[intval($orderCol)] . ' ' . $oderType;
-}
 
-// Consulta
-$sql = "SELECT  " . implode(", ", $columns) . "
-FROM $table
-$where
-$sOrder
-$sLimit";
-$resultado = $conexion->query($sql);
-$num_rows = $resultado->num_rows;
+    <div class="container-fluid">
+  <form class="d-flex">
+			<form action="" method="GET">
+			<input class="form-control me-2" type="search" placeholder="Buscar Prodcuto" 
+			name="busqueda"> <br>
+			<button class="btn btn-outline-info" type="submit" name="enviar"> <b>Buscar </b> </button> 
+			</form>
+  </div>
+  <?php
+            include "../ListPart/modelo/conexion.php";
+            $where="";
 
-// Consulta para total de registro filtrados
-$sqlFiltro = "SELECT FOUND_ROWS()";
-$resFiltro = $conexion->query($sqlFiltro);
-$row_filtro = $resFiltro->fetch_array();
-$totalFiltro = $row_filtro[0];
 
-// Consulta para total de registro
-$sqlTotal = "SELECT count($id) FROM $table ";
-$resTotal = $conexion->query($sqlTotal);
-$row_total = $resTotal->fetch_array();
-$totalRegistros = $row_total[0];
+                    if(isset($_GET['enviar'])){
+                    $busqueda = $_GET['busqueda'];
 
-// Mostrado resultados
-$output = [];
-$output['totalRegistros'] = $totalRegistros;
-$output['totalFiltro'] = $totalFiltro;
-$output['data'] = '';
-$output['paginacion'] = '';
 
-if ($num_rows > 0) {
-    while ($row = $resultado->fetch_assoc()) {
-        $output['data'] .= '<tr>';
-        $output['data'] .= '<td>' . $row['PartN'] . '</td>';
-        $output['data'] .= '<td>' . $row['EAS'] . '</td>';
-        $output['data'] .= '<td>' . $row['Model'] . '</td>';
-        $output['data'] .= '<td>' . $row['SeG'] . '</td>';
-        $output['data'] .= '<td>' . $row['Mo_Co'] . '</td>';
-        $output['data'] .= '<td>' . $row['DesC'] . '</td>';
-        $output['data'] .= '<td>' . $row['PerF'] . '</td>';
-        $output['data'] .= '<td>' . $row['Region'] . '</td>';
-        $output['data'] .= '</tr>';
-    }
-} else {
-    $output['data'] .= '<tr>';
-    $output['data'] .= '<td colspan="7">Sin resultados</td>';
-    $output['data'] .= '</tr>';
-}
+                        if (isset($_GET['busqueda']))
+                        {
+                            $where="WHERE listpart.PartN LIKE'%".$busqueda."%' OR Model  LIKE'%".$busqueda."%'
+                        OR SeG  LIKE'%".$busqueda."%'";
+                        }
+                    
+                    }
 
-// Paginación
-if ($totalRegistros > 0) {
-    $totalPaginas = ceil($totalFiltro / $limit);
 
-    $output['paginacion'] .= '<nav>';
-    $output['paginacion'] .= '<ul class="pagination">';
+                    ?>
+                            <br>
 
-    $numeroInicio = max(1, $pagina - 4);
-    $numeroFin = min($totalPaginas, $numeroInicio + 9);
+                    <!--
+                                </form>
+                        <div class="container-fluid">
+                    <form class="d-flex">
+                        <input class="form-control me-2 light-table-filter" data-table="table_id" type="text" 
+                        placeholder="Buscar con JS">
+                        <hr>
+                        </form>
+                    </div>
+                    -->
+                    <br>
 
-    for ($i = $numeroInicio; $i <= $numeroFin; $i++) {
-        $output['paginacion'] .= '<li class="page-item' . ($pagina == $i ? ' active' : '') . '">';
-        $output['paginacion'] .= '<a class="page-link" href="#" onclick="nextPage(' . $i . ')">' . $i . '</a>';
-        $output['paginacion'] .= '</li>';
-    }
+                    
+                        <table class="table table-striped table-dark table_id ">
 
-    $output['paginacion'] .= '</ul>';
-    $output['paginacion'] .= '</nav>';
-}
+                                    
+                                            <thead>    
+                                            <tr>
+                                            <th>PartN</th>
+                                            <th>EAS</th>
+                                            <th>Model</th>
+                                            <th>SeG</th>
+                                            <th>Mo_Co</th>
+                                            <th>DesC</th>
+                                            <th>PerF</th>
+                            
+                                            </tr>
+                                            </thead>
+                                            <tbody>
 
-echo json_encode($output, JSON_UNESCAPED_UNICODE);
+                                    <?php
+
+                    
+                        $sql=$conexion->query( "select *from listpart" );
+                        while($datos = $sql->fetch_object())
+
+                    if($dato -> num_rows >0){
+                        while($fila=mysqli_fetch_array($dato)){
+                        
+                    ?>
+                    <tr>
+                    <td><?php echo $fila['PartN']; ?></td>
+                    <td><?php echo $fila['EAS']; ?></td>
+                    <td><?php echo $fila['Model']; ?></td>
+                    <td><?php echo $fila['SeG']; ?></td>
+                    <td><?php echo $fila['Mo_Co']; ?></td>
+                    <td><?php echo $fila['DesC']; ?></td>
+                    <td><?php echo $fila['PerF']; ?></td>
+                    <td><?php echo $fila['Region']; ?></td>
+
+
+
+                    <td>
+
+
+                 
+
+                    </td>
+                    </tr>
+
+
+                    <?php
+                    }
+                    }else{
+
+                        ?>
+                        <tr class="text-center">
+                        <td colspan="16">No existen registros</td>
+                        </tr>
+
+                        
+                        <?php
+                        
+                    }
+
+                    ?>
+
+
+	</body>
+  </table>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+>
+<script src="../ListPart/controlador/script.js"></script>
+
+
+
+
+</html>
