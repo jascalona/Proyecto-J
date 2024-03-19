@@ -43,10 +43,9 @@
                     <div class="container-fluid">
                     <form class="d-flex">
                         <form action="" method="GET">
-                            <div class="input">
-                                <input class="form-control me-2" type="search" placeholder="Buscar Producto" name="busqueda"> <br>
-                            </div>
-                                <button  type="submit" name="enviar"> <b>Buscar </b> </button> 
+                            
+                                <input style="margin-top: 50px; border: solid rgb(128, 125, 125, 0.324); margin-left: 140px; color: grey;" class="form-control me-2" type="search" placeholder="Buscar Producto" name="busqueda">
+                                <button style="margin-top: 50px; padding: 16px; margin-right: 290px; background-color: brown; cursor: pointer; border: none; " type="submit" name="enviar">Buscar</button> 
                         </form>
                     </div>
 
