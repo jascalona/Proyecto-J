@@ -34,7 +34,7 @@ if( $validar == null || $validar = ''){
 
 
 
-    <div class="container-fluid">
+<div class="container-fluid">
   <form class="d-flex">
 			<form action="" method="GET">
 			<input class="form-control me-2" type="search" placeholder="Buscar Prodcuto" 

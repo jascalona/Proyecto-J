@@ -1,46 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.container-fluid input{
+    margin-top: 30px;
+    border: solid 1px;
+    padding: 10px;
 }
 
-main{
-    width: 980px;
-    margin: 50px auto;   
-}
-
-table{
-    width: 1005;
-    border-collapse: collapse;
-}
-
-table tr:nth-child(even){
-    background-color: rgb(221, 221, 221);
-}
-
-.input-container{
-    margin: 25px 0;
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
-}
-
-.input-container input[type="search"]{
-    padding: 12px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(221, 221, 221);
-    width: 40%;
-}
-
-.bold{
-    font-weight: bold;
-    color: brown;
-}
-
-.results-container{
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
+.container-fluid button{
+    
 }

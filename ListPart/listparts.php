@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="http://localhost/proyecto-j/CSS/style.css">
     <link rel="stylesheet" href="http://localhost/proyecto-j/CSS/panel.css">
     <link rel="icon" href="http://localhost/proyecto-j/IMG/logo.png">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
     <link rel="stylesheet" href="../ListPart/css/framework.css">
+    <link rel="stylesheet" href="..//ListPart/css/busqueda.css">
     <title>ListPart</title>
 
 
@@ -34,71 +37,116 @@
                 </header>
 
 
+            <!--FILTER-PHP-->
+                <div class="container is-fluid" style="margin-left: 215px;" >
+                    <div class="container-fluid">
+                    <form class="d-flex">
+                    <form action="" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Buscar Producto" 
+                    name="busqueda"> <br>
+                    
 
-    <main>
-        <div class="container py-4 text-center">
-            <h2 style="margin-top: 20px;">ListPart</h2>
+                    <button class="btn btn-outline-info" type="submit" name="enviar"> <b>Buscar </b> </button> 
+                    </form>
+                    </div>
+                    <?php
+                    $conexion=mysqli_connect("localhost","root","","pj"); 
+                    $where="";
 
-          
+                    if(isset($_GET['enviar'])){
+                    $busqueda = $_GET['busqueda'];
 
-            <div class="row g-4">
 
-                <div class="col-md-4 col-xl-5"></div>
+                    if (isset($_GET['busqueda']))
+                    {
+                    $where="WHERE PartN LIKE'%".$busqueda."%' OR Model  LIKE'%".$busqueda."%'
+                    OR SeG  LIKE'%".$busqueda."%'";
+                    }
 
-                <div class="col-6 col-md-1 text-end">
-                    <label for="campo" class="col-form-label">Buscar: </label>
-                </div>
-                <div style="display: flex;" class="col-6 col-md-3 text-end">
-                    <input style="border: 1px solid; border-radius: 5px;" type="text" name="campo" id="campo" class="form-control">
-                    <button type="submit" name="enviar">Filtrar</button>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
+                    }
 
-            <div class="row py-4">
-                <div class="col">
-                    <table class="table table-sm table-bordered table-striped">
-                        <thead>
-                            <th class="sort asc">PartN</th>
-                            <th class="sort asc">EAS</th>
-                            <th class="sort asc">Model</th>
-                            <th class="sort asc">SeG</th>
-                            <th class="sort asc">Mo_Co</th>
-                            <th class="sort asc">DesC</th>
-                            <th class="sort asc">PerF</th>
-                            <th class="sort asc">Region</th>
+
+                    ?>
+                    <br>
+
+                <!--FILTER 
+                    </form>
+                    <div class="container-fluid">
+                    <form class="d-flex">
+                        <input class="form-control me-2 light-table-filter" data-table="table_id" type="text" 
+                        placeholder="Buscar">
+                        <hr>
+                        </form>
+                    </div>
+                    JS-->
+                    
+                    <br>
+
+
+                    <table class="table table-striped table-dark table_id ">
+
+                        
+                        <thead>    
+                            <tr>
+                                <th>PartN</th>
+                                <th>EAS</th>
+                                <th>Model</th>
+                                <th>SeG</th>
+                                <th>Mo_Co</th>
+                                <th>DesC</th>
+                                <th>PerF</th>
+                                <th>Region</th>
+                            </tr>
                         </thead>
 
-                        <tbody >
-                        <?php
-                        include "modelo/conexion.php";
-                        $sql=$conexion->query( "select *from listpart" );
-                        while($datos = $sql->fetch_object()){ ?>
-                    
-                        <tr>
-                            <td><?= $datos->PartN?></td>
-                            <td><?= $datos->EAS?></td>
-                            <td><?= $datos->Model?></td>
-                            <td><?= $datos->SeG?></td>                       
-                            <td><?= $datos->Mo_Co?></td>
-                            <td><?= $datos->DesC?></td>
-                            <td><?= $datos->PerF?></td>
-                            <td><?= $datos->Region?></td>
-                        </tr>
-                        <?php
-                        }
-                        ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                        <tbody>
 
-           
+                    <?php
+
+                    $conexion=mysqli_connect("localhost","root","","pj");               
+                    $SQL="SELECT listpart.PartN, listpart.EAS, listpart.Model, listpart.SeG, listpart.Mo_Co,
+                    listpart.DesC, listpart.PerF, listpart.Region FROM listpart
+                    $where";
+                    $dato = mysqli_query($conexion, $SQL);
+
+                    if($dato -> num_rows >1){
+                    while($fila=mysqli_fetch_array($dato)){
+                    
+                    ?>
+                        <tr>
+                        <td><?php echo $fila['PartN']; ?></td>
+                        <td><?php echo $fila['EAS']; ?></td>
+                        <td><?php echo $fila['Model']; ?></td>
+                        <td><?php echo $fila['SeG']; ?></td>
+                        <td><?php echo $fila['Mo_Co']; ?></td>
+                        <td><?php echo $fila['DesC']; ?></td>
+                        <td><?php echo $fila['PerF']; ?></td>
+                        <td><?php echo $fila['Region']; ?></td>
+
+                        </tr>
+
+
+                    <?php
+                    }
+                    }else{
+
+                    ?>
+                    <tr class="text-center">
+                    <td colspan="16">No existen registros</td>
+                    </tr>
+
+                    <?php
+
+                    }
+
+                    ?>
+                            
 
 
    
-</body>
 
+            <script src="../ListPart/controlador/script.js" ></script>    
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</body>
 </html>
