@@ -6,11 +6,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/panel.css">
+    <link rel="stylesheet" href="http://localhost/proyecto-j/CSS/panel.css">
     <link rel="icon" href="../IMG/logo.png">
     <title>HUAWEI</title>
 </head>
-<body style="background: #f3f3f3;">
+<body style="background: #fff;">
     
 
         <header class="header">
@@ -44,11 +44,12 @@
         <?php
         include "controlador/cargaData.php";
         ?>
-           <div style="margin-left: 210px; margin-top: 80px; font-size: 18px;" class="container">
+           <div style="margin-left: 210px; margin-top: 50px; font-size: 18px;" class="container">
                 <form class="col-3" method="POST">
 
                 <div class="home-logo">
-                    <img src="../IMG/XeroxLogo.png" alt="">
+                    <h4>Instalaciones</h4>
+                    <br>
                 </div>
                 
                 <div class="inputs">
@@ -66,7 +67,7 @@
 
                     <div class="mb-3">
                         <label for="date" class="form-label">Fecha</label><br>
-                        <input type="date" name="date" id="date" required placeholder="Fecha de Carga">
+                        <input style="border-radius: 5px;" type="date" class="form-control" name="date" id="date" required placeholder="Fecha de Carga">
                     </div>
 
                     <div class="mb-3">
@@ -81,7 +82,7 @@
 
             <div class="container-vistas">
                <!-- <div class="col-25"> -->
-                    <table class="table">
+                    <table style="border: solid 1px; width: 140%; height: auto;" class="table table-striped">
 
                     <thead class="bg-info">
                         <tr>
@@ -129,8 +130,8 @@
 
 
            
-        <div class="xeroxWork">
-                <img src="../IMG/xer.jpeg" alt="">
+        <div style="height: 180px; margin-left: 56%;" class="xeroxWork">
+                <img src="..//IMG/xer.jpeg" alt="">
         </div>
 
 
