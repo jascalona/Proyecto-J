@@ -46,7 +46,8 @@
                         <form action="" method="GET">
                                 <input style="margin-top: 50px; border: solid rgb(128, 125, 125, 0.324); margin-left: 150px; color: grey;" class="form-control me-2" type="search" placeholder="Buscar Producto" name="busqueda">
                                 <button style="margin-top: 50px; padding: 16px; margin-right: 290px; background-color: brown; cursor: pointer; border: none; " type="submit" name="enviar">Buscar</button> 
-                        </form>
+                                <button style="margin-top: 50px; background-color: brown; cursor: pointer; border: none; margin-left: -250px; " type="submit" name="limpiar">Limpiar Filtro</button> 
+                            </form>
                     </div>
 
                     <?php
@@ -56,11 +57,14 @@
                     if(isset($_GET['enviar'])){
                     $busqueda = $_GET['busqueda'];
 
+                    if(isset($_GET['limpiar'])){
+                        $limpiar = $_GET['busqueda'];
+                    }
 
                     if (isset($_GET['busqueda']))
                     {
                     $where="WHERE PartN LIKE'%".$busqueda."%' OR Model  LIKE'%".$busqueda."%'
-                    OR SeG  LIKE'%".$busqueda."%'";
+                    OR SeG  LIKE'%".$busqueda."%'  OR Region  LIKE'%".$busqueda."%'";
                     }
 
                     }
