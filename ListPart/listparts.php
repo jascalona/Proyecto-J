@@ -24,7 +24,7 @@
             <header class="header">
                     <nav>
                         <ul class="nav-link">
-                            <div class="logo">
+                            <div style="margin-top:20px;" class="logo">
                                 <img src="http://localhost/proyecto-j//IMG/jquery-logo-120 (1).png" alt="">
                             </div>
                             <li><a href="http://localhost/proyecto-j/index.html"><i class='bx bxs-widget'></i>Dashboard</a></li>
