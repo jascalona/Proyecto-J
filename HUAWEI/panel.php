@@ -114,7 +114,7 @@
                             </td>
 
                             <td>
-                                <a href="panel.php?id=<?= $datos->id?>"><i class='bx bx-x-circle'></i></a>
+                                <a href="panel.php?id=<?= $datos->id?>"><i class='bx bx-trash-alt'></i></a>
                             </td>
                         </tr>
                         <?php
