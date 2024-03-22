@@ -9,7 +9,7 @@ if (!empty($_POST['btnCarga'])) {
         $date = $_POST['date'];
         $file = $_POST['file'];
 
-        $sql = $conexion->query(" insert into huawei(serial,modelo,location,date,file)values('$serial','$modelo','$location','$date','$file')");
+        $sql = $conexion->query(" insert into dhl(serial,modelo,location,date,file)values('$serial','$modelo','$location','$date','$file')");
         if ($sql==1) {
             echo '<div style="margin-left: 470px; position: absolute;" class="alert alert-success">LA CARGA SE REALIZO CORRECTAMENTE</div>';
         } else {

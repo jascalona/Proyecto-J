@@ -41,7 +41,7 @@
 
 
            <div class="title">
-            <a href="/Mi Banco/panel.html" style="color: brown;"><p>Cartas de Instalación</a><b>/</b></p><a href="/Mi Banco//desisntalacion/desinstalacion.html"><p>Desisntalación</p></a>
+            <a href="/Mi Banco/panel.html" style="color: brown;"><p>Cartas de Instalación</a><b>/</b></p><a href="#"><p>Desisntalación</p></a>
         </div>
 
         <?php
@@ -73,27 +73,27 @@
 
                         <div class="mb-3">
                             <label for="serial" class="col-form-label">Serial</label>
-                            <input type="text" class="form-control" id="serial" name="serial" placeholder="Serial del equipo">
+                            <input type="text" class="form-control" id="serial" name="serial" placeholder="Serial del equipo" required>
                         </div>
 
                         <div class="mb-3">
                             <label for="model" class="col-form-label">Modelo</label>
-                            <input type="text" class="form-control" id="modelo" name="modelo" placeholder="Modelo del equipo">
+                            <input type="text" class="form-control" id="modelo" name="modelo" placeholder="Modelo del equipo" required>
                         </div>
 
                         <div class="mt-3">
                             <label for="location" class="col-form-label">Localidad</label>
-                            <input type="text" class="form-control" id="location" name="location" placeholder="Localidad">
+                            <input type="text" class="form-control" id="location" name="location" placeholder="Localidad" required>
                         </div>
 
                         <div class="mt-3">
                             <label for="date" class="col-form-label">Fecha</label>
-                            <input type="date" class="form-control" id="date" name="date" placeholder="Fecha de Instalacion">
+                            <input type="date" class="form-control" id="date" name="date" placeholder="Fecha de Instalacion" required>
                         </div>
 
                         <div class="mt-3">
                             <label for="file" class="col-form-label">File</label>
-                            <input type="file"class="form-control" id="file" name="file" placeholder="Examinar">
+                            <input type="file"class="form-control" id="file" name="file" placeholder="Examinar" required>
                         </div>
 
                             <div class="mb-3">
