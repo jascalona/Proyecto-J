@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="http://localhost/proyecto-j/CSS/panel.css">
     <link rel="icon" href="../IMG/logo.png">
-    <title>HUAWEI</title>
+    <title>MI BANCO</title>
 </head>
 
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/JS/CSS/framework.css">
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<body style="background: #fff;">
+<body>
     
 
-        <header class="header">
-            <nav>
-                <ul class="nav-link">
-                    <div class="logo">
-                        <img src="../IMG/jquery-logo-120 (1).png" alt="">
-                    </div>
-                    <div style="margin-left: 18px; margin-top: -10%;" class="li-nav">
-                        <li><a href="../index.html"><i style="margin-top: 5px;" class='bx bxs-widget'></i>Dashboard</a></li>
-                        <li><a href="../clientes.html"><i style="margin-top: 5px;" class='bx bxs-user'></i>Clientes</a></li>
-                        <li><a href="../report.html"><i style="margin-top: 5px;" class='bx bxs-report' ></i>Report</a></li>
-                        <li><a href="../devices.html"><i style="margin-top: 5px;" class='bx bxs-printer'></i>Devices</a></li>
-                        <li><a href="../counter.html"><i style="margin-top: 5px;" class='bx bx-slider-alt'></i>Counter</a></li>
-                        <li><a href="../ListPart/listparts.php"><i style="margin-top: 5px;" class='bx bxs-cog'></i>ListParts</a></li>
-                    </div>
-                </ul>
-            </nav>
-        </header>
+           
+            <header class="header">
+                <nav>
+                    <ul class="nav-link">
+                        <div class="logo">
+                            <img src="../IMG/jquery-logo-120 (1).png" alt="">
+                        </div>
+                        <div style="margin-left: 18px; margin-top: -10%;" class="li-nav">
+                            <li><a href="../index.html"><i style="margin-top: 5px;" class='bx bxs-widget'></i>Dashboard</a></li>
+                            <li><a href="../clientes.html"><i style="margin-top: 5px;" class='bx bxs-user'></i>Clientes</a></li>
+                            <li><a href="../report.html"><i style="margin-top: 5px;" class='bx bxs-report' ></i>Report</a></li>
+                            <li><a href="../devices.html"><i style="margin-top: 5px;" class='bx bxs-printer'></i>Devices</a></li>
+                            <li><a href="../counter.html"><i style="margin-top: 5px;" class='bx bx-slider-alt'></i>Counter</a></li>
+                            <li><a href="../ListPart/listparts.php"><i style="margin-top: 5px;" class='bx bxs-cog'></i>ListParts</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </header>
 
 
-        <div class="title">
+
+           <div class="title">
             <a href="/Mi Banco/panel.html" style="color: brown;"><p>Cartas de Instalación</a><b>/</b></p><a href="/Mi Banco//desisntalacion/desinstalacion.html"><p>Desisntalación</p></a>
         </div>
 
         <?php
-        include "modelo/conexion.php";
+        include "Conn/conexion.php";
         include "controlador/delete.php";
         ?>
         
@@ -128,8 +129,8 @@
                 </thead>
                 <tbody>
                     <?php
-                    include "modelo/conexion.php";
-                    $sql=$conexion->query(" select *from huawei ");
+                    include "Conn/conexion.php";
+                    $sql=$conexion->query(" select *from miBanco ");
                     while($datos = $sql->fetch_object()){ ?>
 
                         <tr>
