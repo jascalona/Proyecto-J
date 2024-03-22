@@ -92,8 +92,8 @@
                                 <th>EAS</th>
                                 <th>Model</th>
                                 <th>SeG</th>
-                                <th>Mo_Co</th>
-                                <th>DesC</th>
+                                <th>Mo/Co</th>
+                                <th>Description</th>
                                 <th>PerF</th>
                                 <th>Region</th>
                             </tr>
