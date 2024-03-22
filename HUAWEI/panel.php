@@ -82,7 +82,7 @@
 
             <div class="container-vistas">
                <!-- <div class="col-25"> -->
-                    <table style="border: solid 1px; width: 140%; height: auto;" class="table table-striped">
+                    <table style=" margin-left: 15%; border: solid 1px; width: 100%; height: auto;" class="table table-striped">
 
                     <thead class="bg-info">
                         <tr>
@@ -99,20 +99,20 @@
                     <tbody>
                         <?php
                         include "modelo/conexion.php";
+                        include "controlador/preview.php";
                         $sql=$conexion->query( "select *from huawei" );
                         while($datos = $sql->fetch_object()){ ?>
-                    
+
                         <tr>
                             <td><?= $datos->id?></td>
                             <td><?= $datos->serial?></td>
                             <td><?= $datos->modelo?></td>
                             <td><?= $datos->location?></td>
                             <td><?= $datos->date?></td>
-                            <td><?= $datos->file?></td>
+                            <td><a class="btnPre" href="../huawei/controlador/preview.php"><?= $datos->file?></a></td>
                             <td>
                                 <a href="#"><i class='bx bx-envelope-open'></i></a>
                             </td>
-
                             <td>
                                 <a href="panel.php?id=<?= $datos->id?>"><i class='bx bx-trash-alt'></i></a>
                             </td>
