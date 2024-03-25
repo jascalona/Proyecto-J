@@ -211,7 +211,30 @@
 }
 
 .container-panel{
+    flex-wrap: wrap;
     position: absolute;
-    margin-top: -500px;
-    margin-left 30%;
+    margin-top: 50px;
+    margin-left: 25%;
+}
+
+.container-panel img{
+    width: 350px;
+}
+
+.container-panel .linear{
+    margin-top: 10px;
+    border: solid 1px #0d0d1a26;
+}
+
+.container-panel .card{
+    background-color: #7a7a808d;
+}
+
+.container-panel p{
+    font-size: 16px;
+    padding: 20px; 
+}
+
+.sub-conatiner-panel{
+    display: flex;
 }
