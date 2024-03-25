@@ -64,7 +64,7 @@
                     if (isset($_GET['busqueda']))
                     {
                     $where="WHERE PartN LIKE'%".$busqueda."%' OR Model  LIKE'%".$busqueda."%'
-                    OR SeG  LIKE'%".$busqueda."%'  OR Region  LIKE'%".$busqueda."%'";
+                    OR SeG  LIKE'%".$busqueda."%'  OR Region  LIKE'%".$busqueda."%' OR PerF LIKE'%".$busqueda."%' ";
                     }
 
                     }
