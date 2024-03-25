@@ -209,3 +209,9 @@
 .container-xrc title p{
     font-size: 40px;
 }
+
+.container-panel{
+    position: absolute;
+    margin-top: -500px;
+    margin-left 30%;
+}
