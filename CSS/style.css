@@ -295,6 +295,13 @@
     }
 }
 
+.logX img{
+    position: absolute;
+    width: 300px;
+    margin-left: 13%;
+    margin-top: 30px;
+}
+
 
 
 
