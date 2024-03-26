@@ -11,6 +11,11 @@
 <body>
     
 
+
+        <?php
+        include "Devices/Conn/conexion.php";
+        ?>
+
         <form action="" method="POST" >
             <div class="container-log">
                 
@@ -25,6 +30,6 @@
             </div>
 
             <button type="submit" name="btn-ingrese" id="btn-ingrese">Ingresar</button>
-            
+
             </div>
         </form>
