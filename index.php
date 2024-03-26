@@ -11,7 +11,20 @@
 <body>
     
 
-        
-     
+        <form action="" method="POST" >
+            <div class="container-log">
+                
+            <div class="col-3">
+                    <label for="user">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Ingrese su Usuario" required>
+                </div>
+            
+            <div class="col-3">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Ingrese su Contraseña" required>
+            </div>
 
-
+            <button type="submit" name="btn-ingrese" id="btn-ingrese">Ingresar</button>
+            
+            </div>
+        </form>
