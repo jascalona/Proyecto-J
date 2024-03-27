@@ -22,7 +22,7 @@ body{
     margin-top: 5%;
     display: flex;
     justify-content: center;
-    background:#f3f3f3d0;   
+    background:#f3f3f3f3;   
     margin-left: 6%;
     margin-right: 50%;
     padding-top: 100px;
@@ -58,4 +58,11 @@ body{
 
 .container-log button:hover{
     background: rgba(12, 199, 12, 0.804);
+}
+
+@media (min-width: 1300px) {
+    .container-log {
+        width: 50%;
+        background: #000;
+    }
 }
