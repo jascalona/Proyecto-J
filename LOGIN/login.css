@@ -37,6 +37,7 @@ body{
 */
 
 .container-log label{
+    flex-wrap: wrap;
     color: #000;
 }
 
@@ -60,9 +61,37 @@ body{
     background: rgba(12, 199, 12, 0.804);
 }
 
-@media (min-width: 1300px) {
-    .container-log {
-        width: 50%;
-        background: #000;
+@media (max-width: 1400px) {
+    .container-log{
+        height: 600px;
+    }
+    
+    .container-log p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 955px) {
+    .container-log p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 930px) {
+    .container-log p{
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    .container-log input {
+        padding-right: 150px;
+
+    }
+}
+
+@media (max-width: 800px) {
+    .container-log input {
+        padding-right: 120px;
     }
 }
