@@ -14,6 +14,7 @@
 
         <?php
         include "LOGIN/Conn/conexion.php";
+        include "LOGIN/controlador/validarUser.php"
         ?>
 
 
@@ -25,15 +26,15 @@
 
                         <div class="col-3">
                                 <label for="user">Usuario</label><br><br>
-                                <input type="text" name="usuario" id="usuario" placeholder="Ingrese su Usuario" required>
+                                <input type="text" name="user" id="usuario" placeholder="Ingrese su Usuario" >
                             </div>
                         
                         <div class="col-3">
                             <label for="password">Contraseña</label><br><br>
-                            <input type="password" name="password" id="password" placeholder="Ingrese su Contraseña" required>
+                            <input type="password" name="password" id="password" placeholder="Ingrese su Contraseña" >
                         </div>
 
-                        <button type="submit" name="btn-ingrese" id="btn-ingrese">Ingresar</button>
+                        <button type="submit" name="btnIngrese" id="btnIngrese">Ingresar</button>
                     </div>
 
                         <div style="margin-top: 80px; margin-left: 30%;" class="registrar">
