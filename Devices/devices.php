@@ -22,7 +22,8 @@
                     
                     <div class="container is-fluid" style="margin-left: 200px;" >
                         <div class="container-fluid">
-                            <h4 style="font-size: 50px; margin-top: -15%;">J-PRD</h4>
+                            <h4 style="font-size: 50px; margin-top: -10%;"><a style="color: #000; text-decoration: none;" 
+                            href="../Dashboard.html">J-PRD</a></h4>
                         <!-- satrt filter php-validar-funcionamiento 
                             <form class="d-flex" style="margin-top: -40px;">
                             <form action="" method="GET">
