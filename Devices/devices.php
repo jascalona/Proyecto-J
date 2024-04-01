@@ -17,86 +17,159 @@
     
                 
                     <div class="container-tables">
+
+                    <!--FILTRO-->
                     
-                    <?php
-                    include "Conn/conexion.php";
-                    include "controlador/cargaData.php"
+                    <div class="container is-fluid" style="margin-left: 200px;" >
+                        <div class="container-fluid">
+                            <h4 style="font-size: 50px; margin-top: -15%;">J-PRD</h4>
+                        <form class="d-flex" style="margin-top: -40px;">
+                            <form action="" method="GET">
+                                    <input style="margin-top: 50px; border: solid rgb(128, 125, 125, 0.324); margin-left: 150px; color: grey;" class="form-control me-2" type="search" placeholder="Buscar Producto" name="busqueda">
+                                    <button style="margin-top: 50px; padding: 16px; margin-right: 290px; background-color: brown; cursor: pointer; border: none; border-radius: 5px; " type="submit" name="enviar">Buscar</button> 
+                                    <button style="margin-top: 50px; background-color: brown; cursor: pointer; border: none; border-radius: 5px; margin-left: -250px; padding-right: 10px; padding-left: 10px;" type="submit" name="limpiar">Limpiar Filtro</button> 
+                                </form>
+                        </div>
+                        <br>
+                        <br>
+
+                        <!--satrt php-->
+                        <?php
+                    $conexion=mysqli_connect("localhost","root","","pj"); 
+                    $where="";
+
+                    if(isset($_GET['enviar'])){
+                    $busqueda = $_GET['busqueda'];
+
+                    if(isset($_GET['limpiar'])){
+                        $limpiar = $_GET['busqueda'];
+                    }
+
+                    if (isset($_GET['busqueda']))
+                    {
+                    $where="WHERE serial LIKE'%".$busqueda."%' OR modelo  LIKE'%".$busqueda."%'
+                    OR cliente  LIKE'%".$busqueda."%'  OR location  LIKE'%".$busqueda."%' OR region LIKE'%".$busqueda."%' ";
+                    }
+
+                    }
                     ?>
+                    <br>
 
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Filtrar Serial
-                            </button>
-                            <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                            <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Filtrar Modelo
-                            </button>
-                            <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                            <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Filtrar Cliente
-                            </button>
-                            <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                            <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Filtrar Localidad
-                            </button>
-                            <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                            <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                            </ul>
-                        </div>
+                <!--FILTER 
+                    </form>
+                    <div class="container-fluid">
+                    <form class="d-flex">
+                        <input class="form-control me-2 light-table-filter" data-table="table_id" type="text" 
+                        placeholder="Buscar">
+                        <hr>
+                        </form>
+                    </div>
+                    JS-->
+                    
+                    <br>
+                    <table style="margin-left: 130px; margin-top: 70px;" class="table table-bordered table_id ">
 
-                        <table class="table">
-                        <thead>
+                        
+                        <thead>    
                             <tr>
-                                <th scope="col">Serial</th>
-                                <th scope="col">Modelo</th>
-                                <th scope="col">Cliente</th>
-                                <th scope="col">Localidad</th>
-                                <th scope="col">Region</th>  
-                                <th scope="col">Total</th>
+                                <th>Serial</th>
+                                <th>Modelo</th>
+                                <th>Cliente</th>
+                                <th>Localidad</th>
+                                <th>Region</th>
+                                <th>Total</th>
                             </tr>
                         </thead>
+
                         <tbody>
-                            <?php
-                            include "Conn/conexion.php";
-                            $sql=$conexion->query(" select *from devices ");
-                            while($datos = $sql ->fetch_object()) { ?>
+
+                    <?php
+
+                    $conexion=mysqli_connect("localhost","root","","pj");               
+                    $SQL="SELECT equipos.serial, equipos.modelo, equipos.cliente, equipos.location, equipos.region,
+                    equipos.total FROM equipos
+                    $where";
+                    $dato = mysqli_query($conexion, $SQL);
+
+                    if($dato -> num_rows >1){
+                    while($fila=mysqli_fetch_array($dato)){
+                    
+                    ?>
+                        <tr>
+                            <td><?php echo $fila['serial']; ?></td>
+                            <td><?php echo $fila['modelo']; ?></td>
+                            <td><?php echo $fila['cliente']; ?></td>
+                            <td><?php echo $fila['location']; ?></td>
+                            <td><?php echo $fila['region']; ?></td>
+                            <td><?php echo $fila['total']; ?></td>
+                        </tr>
+
+
+                    <?php
+                    }
+                    }else{
+
+                    ?>
+                    <tr class="text-center">
+                    <td colspan="16">No existen registros</td>
+                    </tr>
+
+                    <?php
+    
+                    }
+
+                    ?>
+
+                        <!--end php-->
+
+                        <div class="plugins-filter">
+                            <div class="btn-group" role="group">
+                                <button type="button" name="btn-model" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Filtrar Modelo
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"><button type="submit" name="btns" >Hello</button></li>
+                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
+                                </ul>
+                            </div>
                             
-                                <tr>
-                                    <td><?=$datos->serial?></td>
-                                    <td><?=$datos->model?></td>
-                                    <td><?=$datos->customer?></td>
-                                    <td><?=$datos->location?></td>
-                                    <td><?=$datos->region?></td>
-                                    <td><?=$datos->total?></td>
-                                </tr>
-                                <?php
-                            }
-                            ?>
-                        </tbody>
-                        </table>
+                            <div class="btn-group" role="group">
+                                <button type="button" name="btn-customer" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Filtrar Cliente
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
+                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="btn-group" role="group">
+                                <button type="button" name="btn-location" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Filtrar Localidad
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
+                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="btn-group" role="group">
+                                <button type="button" name="btn-region" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Filtrar Region
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
+                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                     
                     </div>
 
 
 
-
+                    <script src="../ListPart/controlador/script.js" ></script>    
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </body>
 </html>
