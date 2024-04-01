@@ -23,7 +23,8 @@
                     <div class="container is-fluid" style="margin-left: 200px;" >
                         <div class="container-fluid">
                             <h4 style="font-size: 50px; margin-top: -15%;">J-PRD</h4>
-                        <form class="d-flex" style="margin-top: -40px;">
+                        <!-- satrt filter php-validar-funcionamiento 
+                            <form class="d-flex" style="margin-top: -40px;">
                             <form action="" method="GET">
                                     <input style="margin-top: 50px; border: solid rgb(128, 125, 125, 0.324); margin-left: 150px; color: grey;" class="form-control me-2" type="search" placeholder="Buscar Producto" name="busqueda">
                                     <button style="margin-top: 50px; padding: 16px; margin-right: 290px; background-color: brown; cursor: pointer; border: none; border-radius: 5px; " type="submit" name="enviar">Buscar</button> 
@@ -32,7 +33,8 @@
                         </div>
                         <br>
                         <br>
-
+                              
+                                
                         <!--satrt php-->
                         <?php
                     $conexion=mysqli_connect("localhost","root","","pj"); 
@@ -47,15 +49,15 @@
 
                     if (isset($_GET['busqueda']))
                     {
-                    $where="WHERE serial LIKE'%".$busqueda."%' OR modelo  LIKE'%".$busqueda."%'
-                    OR cliente  LIKE'%".$busqueda."%'  OR location  LIKE'%".$busqueda."%' OR region LIKE'%".$busqueda."%' ";
+                    $where="WHERE serial LIKE'%".$busqueda."%' OR model  LIKE'%".$busqueda."%'
+                    OR customer  LIKE'%".$busqueda."%'  OR location  LIKE'%".$busqueda."%' OR region LIKE'%".$busqueda."%' ";
                     }
 
                     }
                     ?>
                     <br>
 
-                <!--FILTER 
+ 
                     </form>
                     <div class="container-fluid">
                     <form class="d-flex">
@@ -64,7 +66,7 @@
                         <hr>
                         </form>
                     </div>
-                    JS-->
+                    
                     
                     <br>
                     <table style="margin-left: 130px; margin-top: 70px;" class="table table-bordered table_id ">
@@ -86,8 +88,8 @@
                     <?php
 
                     $conexion=mysqli_connect("localhost","root","","pj");               
-                    $SQL="SELECT equipos.serial, equipos.modelo, equipos.cliente, equipos.location, equipos.region,
-                    equipos.total FROM equipos
+                    $SQL="SELECT devices.serial, devices.model, devices.customer, devices.location, devices.region,
+                    devices.total FROM devices
                     $where";
                     $dato = mysqli_query($conexion, $SQL);
 
@@ -97,8 +99,8 @@
                     ?>
                         <tr>
                             <td><?php echo $fila['serial']; ?></td>
-                            <td><?php echo $fila['modelo']; ?></td>
-                            <td><?php echo $fila['cliente']; ?></td>
+                            <td><?php echo $fila['model']; ?></td>
+                            <td><?php echo $fila['customer']; ?></td>
                             <td><?php echo $fila['location']; ?></td>
                             <td><?php echo $fila['region']; ?></td>
                             <td><?php echo $fila['total']; ?></td>
