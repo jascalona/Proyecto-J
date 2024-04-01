@@ -33,7 +33,7 @@
                         </div>
                         <br>
                         <br>
-                                -->
+                              
                                 
                         <!--satrt php-->
                         <?php
@@ -125,20 +125,14 @@
                         <!--end php-->
 
                         <div class="plugins-filter">
-
                             <div class="btn-group" role="group">
-
-                                <select class="btn btn-primary dropdown-toggle" name="model" id="model">
-                                <?php if ($_POST['model'] != '') { ?>
-                                        <option value="<?php echo $_POST['model']; ?>"><?php echo $_POST['model']; ?></option>
-                                    <?php } ?> 
-                                        <option value="">Todos</option>
-                                        <option value="model">B405</option>
-                                        <option value="customer">C405</option>
-                                        <option value="location">WC7220</option>
-                                        <option value="region">WC3655</option>
-                                    
-                                </select>
+                                <button type="button" name="btn-model" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Filtrar Modelo
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"><button type="submit" name="btns" >Hello</button></li>
+                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
+                                </ul>
                             </div>
                             
                             <div class="btn-group" role="group">
@@ -173,10 +167,6 @@
                         </div>
                         
                      
-                        <div class="btn-group" role="group">
-                                <button type="submit" name="btn-aplicar" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
-                                Aplicar Flitos
-                                </button>
                     </div>
 
 
