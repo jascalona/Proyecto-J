@@ -125,8 +125,8 @@
                         <!--end php-->
 
                         <div class="plugins-filter">
-
-                            <div class="btn-group" role="group">
+                            <form action="" method="POST">
+                                <div class="btn-group" role="group">
 
                                 <select class="btn btn-primary dropdown-toggle" name="model" id="model">
                                 <?php if ($_POST['model'] != '') { ?>
@@ -134,20 +134,31 @@
                                     <?php } ?> 
                                         <option value="">Todos</option>
                                         <option value="model">B405</option>
-                                        <option value="customer">C405</option>
-                                        <option value="location">WC7220</option>
-                                        <option value="region">WC3655</option>
-                                    
+                                        <option value="model">C405</option>
+                                        <option value="model">WC7220</option>
+                                        <option value="model">WC3655</option>
                                 </select>
                             </div>
                             
+                            
+
+
+                            
                             <div class="btn-group" role="group">
-                                <button type="button" name="btn-customer" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                Filtrar Cliente
+                                <button type="button" name="btn-location" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Filtrar Modelo
                                 </button>
+                                
                                 <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
+                                    <option class="dropdown-item" value="1">Versant280</option>
+                                    <option class="dropdown-item" value="2">B405</option>
+                                    <option class="dropdown-item" value="3">C405</option>
+                                    <option class="dropdown-item" value="4">B400</option>
+                                    <option class="dropdown-item" value="5">C400</option>
+                                    <option class="dropdown-item" value="6">WC7220</option>
+                                    <option class="dropdown-item" value="7">WC3655</option>
+                                    <option class="dropdown-item" value="8">WC3315</option>
+                                    <option class="dropdown-item" value="9">B600</option>
                                 </ul>
                             </div>
                             
@@ -177,6 +188,8 @@
                                 <button type="submit" name="btn-aplicar" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
                                 Aplicar Flitos
                                 </button>
+
+                        </form>
                     </div>
 
 
