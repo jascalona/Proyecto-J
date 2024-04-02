@@ -58,7 +58,7 @@
                     ?>
                     <br>
 
- 
+                    <!--satrt search JS-->
                     </form>
                     <div class="container-fluid">
                     <form class="d-flex">
@@ -68,62 +68,11 @@
                         </form>
                     </div>
                     
-                    
                     <br>
-                    <table style="margin-left: 130px; margin-top: 70px;" class="table table-bordered table_id ">
-
-                        
-                        <thead>    
-                            <tr>
-                                <th>Serial</th>
-                                <th>Modelo</th>
-                                <th>Cliente</th>
-                                <th>Localidad</th>
-                                <th>Region</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                    <?php
-
-                    $conexion=mysqli_connect("localhost","root","","pj");               
-                    $SQL="SELECT devices.serial, devices.model, devices.customer, devices.location, devices.region,
-                    devices.total FROM devices
-                    $where";
-                    $dato = mysqli_query($conexion, $SQL);
-
-                    if($dato -> num_rows >1){
-                    while($fila=mysqli_fetch_array($dato)){
-                    
-                    ?>
-                        <tr>
-                            <td><?php echo $fila['serial']; ?></td>
-                            <td><?php echo $fila['model']; ?></td>
-                            <td><?php echo $fila['customer']; ?></td>
-                            <td><?php echo $fila['location']; ?></td>
-                            <td><?php echo $fila['region']; ?></td>
-                            <td><?php echo $fila['total']; ?></td>
-                        </tr>
+                    <!--END search JS-->
 
 
-                    <?php
-                    }
-                    }else{
-
-                    ?>
-                    <tr class="text-center">
-                    <td colspan="16">No existen registros</td>
-                    </tr>
-
-                    <?php
-    
-                    }
-
-                    ?>
-
-                        <!--end php-->
+                    <!--SATRT PLUGINS (FILTROS)-->
 
                         <div class="plugins-filter">
                         <form action="devices.php" method="GET">
@@ -202,6 +151,63 @@
                     }
                     ?>
 
+                    <!--END  PLUGINS (FILTROS)-->                    
+                    
+                    <br>
+                    <table style="margin-left: 130px; margin-top: 70px;" class="table table-bordered table_id ">
+
+                        
+                        <thead>    
+                            <tr>
+                                <th>Serial</th>
+                                <th>Modelo</th>
+                                <th>Cliente</th>
+                                <th>Localidad</th>
+                                <th>Region</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                    <?php
+
+                    $conexion=mysqli_connect("localhost","root","","pj");               
+                    $SQL="SELECT devices.serial, devices.model, devices.customer, devices.location, devices.region,
+                    devices.total FROM devices
+                    $where";
+                    $dato = mysqli_query($conexion, $SQL);
+
+                    if($dato -> num_rows >1){
+                    while($fila=mysqli_fetch_array($dato)){
+                    
+                    ?>
+                        <tr>
+                            <td><?php echo $fila['serial']; ?></td>
+                            <td><?php echo $fila['model']; ?></td>
+                            <td><?php echo $fila['customer']; ?></td>
+                            <td><?php echo $fila['location']; ?></td>
+                            <td><?php echo $fila['region']; ?></td>
+                            <td><?php echo $fila['total']; ?></td>
+                        </tr>
+
+
+                    <?php
+                    }
+                    }else{
+
+                    ?>
+                    <tr class="text-center">
+                    <td colspan="16">No existen registros</td>
+                    </tr>
+
+                    <?php
+    
+                    }
+
+                    ?>
+
+                        
                     <script src="../ListPart/controlador/script.js" ></script>    
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </body>
