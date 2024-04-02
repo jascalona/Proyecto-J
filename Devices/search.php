@@ -34,7 +34,7 @@ while ($fila = mysqli_fetch_assoc($resultado)) {
     echo $fila  ['customer'] . '<br>';
     echo $fila  ['location'] . '<br>';
     echo $fila  ['region'] . '<br>';
-
+ 
 }
 
 mysqli_close($conexion);
