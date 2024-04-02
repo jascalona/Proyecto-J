@@ -148,8 +148,8 @@
             
                             
                             <div class="btn-group" role="group">
-                            <select class="btn btn-primary dropdown-toggle" name="model" id="model">
-                                <?php if ($_POST['model'] != '') { ?>
+                            <select class="btn btn-primary dropdown-toggle" name="customer" id="customer">
+                                <?php if ($_POST['customer'] != '') { ?>
                                         <option value="<?php echo $_POST['customer']; ?>"><?php echo $_POST['model']; ?></option>
                                     <?php } ?> 
                                     <option value="">Filtrar Cliente</option>
@@ -166,7 +166,7 @@
                             </div>
 
                             <div class="btn-group" role="group">
-                            <select class="btn btn-primary dropdown-toggle" name="model" id="model">
+                            <select class="btn btn-primary dropdown-toggle" name="location" id="location">
                                 <?php if ($_POST['location'] != '') { ?>
                                         <option value="<?php echo $_POST['location']; ?>"><?php echo $_POST['location']; ?></option>
                                     <?php } ?> 
