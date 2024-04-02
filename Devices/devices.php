@@ -37,7 +37,6 @@
                                 -->
                                 
                         <!--satrt php-->
-                        
                         <?php
                     $conexion=mysqli_connect("localhost","root","","pj"); 
                     $where="";
@@ -126,114 +125,50 @@
 
                         <!--end php-->
 
-                        <?php
-                        include "Conn/conexion.php";
-
-                        if (!isset($_POST['buscar'])) {$_POST['buscar'] = '';}
-                        if (!isset($_POST['model'])) {$_POST['model'] = '';} 
-                        if (!isset($_POST['customer'])) {$_POST['customer'] = '';}
-                        if (!isset($_POST['location'])) {$_POST['location'] = '';} 
-                        if (!isset($_POST['region'])) {$_POST['region'] = '';}              
-
-                        ?>
-
                         <div class="plugins-filter">
-                            <form action="" method="POST">
-                                <div class="btn-group" role="group">
-
+                        <form action="search.php" method="GET">
+                                
+                            <div class="btn-group" role="group">
                                 <select class="btn btn-primary dropdown-toggle" name="model" id="model">
-                                <?php if ($_POST['model'] != '') { ?>
-                                        <option value="<?php echo $_POST['model']; ?>"><?php echo $_POST['model']; ?></option>
-                                    <?php } ?> 
                                     <option value="">Filtrar Modelos</option>
-                                    <option class="dropdown-item" value="model">Versant280</option>
-                                    <option class="dropdown-item" value="model">B405</option>
-                                    <option class="dropdown-item" value="model">C405</option>
-                                    <option class="dropdown-item" value="model">B400</option>
-                                    <option class="dropdown-item" value="model">C400</option>
-                                    <option class="dropdown-item" value="model">WC7220</option>
-                                    <option class="dropdown-item" value="model">WC3655</option>
-                                    <option class="dropdown-item" value="model">WC3315</option>
-                                    <option class="dropdown-item" value="model">B600</option>
-                                </select>
-                            </div>
-            
-                            
-                            <div class="btn-group" role="group">
-                            <select class="btn btn-primary dropdown-toggle" name="customer" id="customer">
-                                <?php if ($_POST['customer'] != '') { ?>
-                                        <option value="<?php echo $_POST['customer']; ?>"><?php echo $_POST['model']; ?></option>
-                                    <?php } ?> 
-                                    <option value="">Filtrar Cliente</option>
-                                    <option class="dropdown-item" value="customer">Versant280</option>
-                                    <option class="dropdown-item" value="customer">Mi Banco</option>
-                                    <option class="dropdown-item" value="customer">farmatodo</option>
-                                    <option class="dropdown-item" value="customer">loky</option>
-                                    <option class="dropdown-item" value="customer">caf</option>
-                                    <option class="dropdown-item" value="customer">polar</option>
-                                    <option class="dropdown-item" value="customer">provincial</option>
-                                    <option class="dropdown-item" value="customer">mercantil</option>
-                                    <option class="dropdown-item" value="customer">dhl</option>
+                                    <option value="C405">C405</option>
+                                    <option value="wc3655">wc3655</option>
+                                    <option value="wc3315">wc3315</option>
+                                    <option value="wc3655">wc3655</option>
+                                    <option value="b405">b405</option>
                                 </select>
                             </div>
 
                             <div class="btn-group" role="group">
-                            <select class="btn btn-primary dropdown-toggle" name="location" id="location">
-                                <?php if ($_POST['location'] != '') { ?>
-                                        <option value="<?php echo $_POST['location']; ?>"><?php echo $_POST['location']; ?></option>
-                                    <?php } ?> 
+                                <select class="btn btn-primary dropdown-toggle" name="customer" id="customer">
+                                    <option value="">Filter Customer</option>
+                                    <option value="mi banco">mi banco</option>
+                                    <option value="farmatodo">farmatodo</option>
+                                    <option value="loky">loky</option>
+                                    <option value="caf">caf</option>
+                                    <option value="polar">polar</option>
+                                </select>
+                            </div>
+
+                            <div class="btn-group" role="group">
+                                <select class="btn btn-primary dropdown-toggle" name="location" id="location">
                                     <option value="">Filtrar Localidad</option>
-                                    <option class="dropdown-item" value="location">anzuategui</option>
-                                    <option class="dropdown-item" value="location">miranda</option>
-                                    <option class="dropdown-item" value="location">aragua</option>
-                                    <option class="dropdown-item" value="location">bolivar</option>
-                                    <option class="dropdown-item" value="location">maracaibo</option>
-                                    <option class="dropdown-item" value="location">distrito capital</option>
-                                    <option class="dropdown-item" value="location">aragua</option>
+                                    <option value="mirandino">mirandino</option>
+                                    <option value="miranda">miranda</option>
+                                    <option value="bolivar">bolivar</option>
+                                    <option value="distrito capital">distrito capital</option>
                                 </select>
                             </div>
-
-                            <div class="btn-group" role="group">
-                            <select class="btn btn-primary dropdown-toggle" name="region" id="region">
-                                <?php if ($_POST['region'] != '') { ?>
-                                        <option value="<?php echo $_POST['region']; ?>"><?php echo $_POST['region']; ?></option>
-                                    <?php } ?> 
-                                    <option value="">Filtrar Region</option>
-                                    <option class="dropdown-item" value="region">puerto la cruz</option>
-                                    <option class="dropdown-item" value="region">guatire</option>
-                                    <option class="dropdown-item" value="region">los teques</option>
-                                    <option class="dropdown-item" value="region">valencia</option>
-                                    <option class="dropdown-item" value="region">alicante</option>
-                                    <option class="dropdown-item" value="region">maracaibo</option>
-                                    <option class="dropdown-item" value="region">caracas</option>
-                                </select>
-                            </div>
-                        
-                     
-
-                            <!--CREATION FILTER-->
-                            <?php
+                        </div>
                             
-                            if ($_POST['buscar'] == ''){$_POST['buscar'] = ' ';}
-                            
-                            ?>        
-
-
-                                <div class="btn-group" role="group">
-                            
-                                <button type="submit" name="btn-aplicar" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
-                                Aplicar Flitos
-                                </button>
+                        <button type="submit" name="search" id="search" class="btn btn-primary" value="search">Aplicar Filtros</button>
 
                         </form>
                     </div>
 
 
 
-
-                    
-
-            <script src="../ListPart/controlador/script.js" ></script>    
+                    <script src="../ListPart/controlador/script.js" ></script>    
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </body>
 </html>
