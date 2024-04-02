@@ -113,9 +113,18 @@
                                 </select>
                             </div>
                         </div>
-                            
-                        <button type="submit" name="search" id="search" class="btn btn-primary" value="search">Aplicar Filtros</button>
+    
 
+                        <div class="btn-filter">
+                        <div class="btn-group" role="group">
+                                <button type="submit" name="search" id="search" class="btn btn-primary" value="search">Aplicar Filtros</button>
+                            </div>
+                            
+
+                            <div class="btn-group" role="group">
+                                <button type="submit" name="reset" id="reset" class="btn btn-primary" value="reset">Limpiar Filtros</button>
+                            </div>
+                        
                         </form>
                     </div>
                                    

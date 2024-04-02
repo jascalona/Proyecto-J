@@ -3,7 +3,7 @@
 include "Conn/conexion.php";
 
 
-$search = $_GET['search'];
+// $search = $_GET['search'];
 $model = $_GET['model'];
 $customer = $_GET['customer'];
 $location = $_GET['location'];
