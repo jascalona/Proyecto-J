@@ -125,6 +125,17 @@
 
                         <!--end php-->
 
+                        <?php
+                        include "Conn/conexion.php";
+
+                        if (!isset($_POST['buscar'])) {$_POST['buscar'] = '';}
+                        if (!isset($_POST['model'])) {$_POST['model'] = '';} 
+                        if (!isset($_POST['customer'])) {$_POST['customer'] = '';}
+                        if (!isset($_POST['location'])) {$_POST['location'] = '';} 
+                        if (!isset($_POST['region'])) {$_POST['region'] = '';}              
+
+                        ?>
+
                         <div class="plugins-filter">
                             <form action="" method="POST">
                                 <div class="btn-group" role="group">
@@ -182,7 +193,7 @@
                             </div>
 
                             <div class="btn-group" role="group">
-                            <select class="btn btn-primary dropdown-toggle" name="model" id="model">
+                            <select class="btn btn-primary dropdown-toggle" name="region" id="region">
                                 <?php if ($_POST['region'] != '') { ?>
                                         <option value="<?php echo $_POST['region']; ?>"><?php echo $_POST['region']; ?></option>
                                     <?php } ?> 
@@ -198,6 +209,15 @@
                             </div>
                         
                      
+
+                            <!--CREATION FILTER-->
+                            <?php
+                            
+                            if ($_POST['buscar'] == ''){$_POST['buscar'] = ' ';}
+                            
+                            ?>        
+
+
                         <div class="btn-group" role="group">
                                 <button type="submit" name="btn-aplicar" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
                                 Aplicar Flitos
