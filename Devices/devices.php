@@ -118,10 +118,6 @@
 
                         </form>
                     </div>
-
-                    <?php
-                    include "search.php";
-                    ?>
                                    
                     
                     <br>
@@ -148,6 +144,8 @@
                     devices.total FROM devices
                     $where";
                     $dato = mysqli_query($conexion, $SQL);
+
+                    include "search.php";
 
                     if($dato -> num_rows >1){
                     while($fila=mysqli_fetch_array($dato)){
