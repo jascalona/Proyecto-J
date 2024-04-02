@@ -37,6 +37,7 @@
                                 -->
                                 
                         <!--satrt php-->
+                        
                         <?php
                     $conexion=mysqli_connect("localhost","root","","pj"); 
                     $where="";
@@ -219,6 +220,7 @@
 
 
                         <div class="btn-group" role="group">
+                            
                                 <button type="submit" name="btn-aplicar" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
                                 Aplicar Flitos
                                 </button>
