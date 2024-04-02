@@ -22,7 +22,8 @@
                     
                     <div class="container is-fluid" style="margin-left: 200px;" >
                         <div class="container-fluid">
-                            <h4 style="font-size: 50px; margin-top: -15%;">J-PRD</h4>
+                            <h4 style="font-size: 50px; margin-top: -10%;"><a style="color: #000; text-decoration: none;" 
+                            href="../Dashboard.html">J-PRD</a></h4>
                         <!-- satrt filter php-validar-funcionamiento 
                             <form class="d-flex" style="margin-top: -40px;">
                             <form action="" method="GET">
@@ -33,7 +34,7 @@
                         </div>
                         <br>
                         <br>
-                              
+                                -->
                                 
                         <!--satrt php-->
                         <?php
@@ -125,25 +126,30 @@
                         <!--end php-->
 
                         <div class="plugins-filter">
-                            <div class="btn-group" role="group">
-                                <button type="button" name="btn-model" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                Filtrar Modelo
-                                </button>
-                                <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"><button type="submit" name="btns" >Hello</button></li>
-                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                                </ul>
+                            <form action="" method="POST">
+                                <div class="btn-group" role="group">
+
+                                <select class="btn btn-primary dropdown-toggle" name="model" id="model">
+                                <?php if ($_POST['model'] != '') { ?>
+                                        <option value="<?php echo $_POST['model']; ?>"><?php echo $_POST['model']; ?></option>
+                                    <?php } ?> 
+                                    <option value="">Filtrar Modelos</option>
+                                    <option class="dropdown-item" value="1">Versant280</option>
+                                    <option class="dropdown-item" value="2">B405</option>
+                                    <option class="dropdown-item" value="3">C405</option>
+                                    <option class="dropdown-item" value="4">B400</option>
+                                    <option class="dropdown-item" value="5">C400</option>
+                                    <option class="dropdown-item" value="6">WC7220</option>
+                                    <option class="dropdown-item" value="7">WC3655</option>
+                                    <option class="dropdown-item" value="8">WC3315</option>
+                                    <option class="dropdown-item" value="9">B600</option>
+                                </select>
                             </div>
                             
-                            <div class="btn-group" role="group">
-                                <button type="button" name="btn-customer" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                Filtrar Cliente
-                                </button>
-                                <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                                <li><a class="dropdown-item" href="#">Cargar db</a></li>
-                                </ul>
-                            </div>
+                            
+
+
+                           
                             
                             <div class="btn-group" role="group">
                                 <button type="button" name="btn-location" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -167,6 +173,12 @@
                         </div>
                         
                      
+                        <div class="btn-group" role="group">
+                                <button type="submit" name="btn-aplicar" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
+                                Aplicar Flitos
+                                </button>
+
+                        </form>
                     </div>
 
 
