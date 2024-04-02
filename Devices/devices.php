@@ -126,7 +126,7 @@
                         <!--end php-->
 
                         <div class="plugins-filter">
-                        <form action="search.php" method="GET">
+                        <form action="devices.php" method="GET">
                                 
                             <div class="btn-group" role="group">
                                 <select class="btn btn-primary dropdown-toggle" name="model" id="model">
@@ -166,7 +166,41 @@
                         </form>
                     </div>
 
+                    <?php
+                    include "Conn/conexion.php";
+                    
+                    $model = $_GET['model'];
+                    $customer = $_GET['customer'];
+                    $location = $_GET['location'];
 
+                    $sql = " SELECT *FROM devices WHERE 1=1 ";
+
+                    //DEVOLUCIONES DE SENTENCIAS SQL
+
+                    if (!empty($model)) {
+                        $sql .=  " AND model LIKE '%$model' AND customer LIKE '%$customer' AND location LIKE '%$location' ";
+                    }
+
+                    if (!empty($customer)) {
+                        $sql .= " AND model LIKE '%$model' AND customer LIKE '%$customer' AND location LIKE '%$location' ";
+                    }
+
+                    if (!empty($location)) {
+                        $sql .= " AND model LIKE '%$model' AND customer LIKE '%$customer' AND location LIKE '%$location' ";
+                    }
+
+
+                    $resultado = mysqli_query($conexion, $sql);
+
+                    while ($fila = mysqli_fetch_assoc($resultado)) {
+                        echo $fila ['serial'];
+                        echo $fila ['model']; 
+                        echo $fila ['customer'];
+                        echo $fila ['location'];
+                        echo $fila ['region'];
+
+                    }
+                    ?>
 
                     <script src="../ListPart/controlador/script.js" ></script>    
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
