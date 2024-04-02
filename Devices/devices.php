@@ -74,9 +74,13 @@
 
                     <!--SATRT PLUGINS (FILTROS)-->
 
+                        
+
                         <div class="plugins-filter">
                         <form action="devices.php" method="GET">
                                 
+                       
+
                             <div class="btn-group" role="group">
                                 <select class="btn btn-primary dropdown-toggle" name="model" id="model">
                                     <option value="">Filtrar Modelos</option>
@@ -116,42 +120,9 @@
                     </div>
 
                     <?php
-                    include "Conn/conexion.php";
-                    
-                    $model = $_GET['model'];
-                    $customer = $_GET['customer'];
-                    $location = $_GET['location'];
-
-                    $sql = " SELECT *FROM devices WHERE 1=1 ";
-
-                    //DEVOLUCIONES DE SENTENCIAS SQL
-
-                    if (!empty($model)) {
-                        $sql .=  " AND model LIKE '%$model' AND customer LIKE '%$customer' AND location LIKE '%$location' ";
-                    }
-
-                    if (!empty($customer)) {
-                        $sql .= " AND model LIKE '%$model' AND customer LIKE '%$customer' AND location LIKE '%$location' ";
-                    }
-
-                    if (!empty($location)) {
-                        $sql .= " AND model LIKE '%$model' AND customer LIKE '%$customer' AND location LIKE '%$location' ";
-                    }
-
-
-                    $resultado = mysqli_query($conexion, $sql);
-
-                    while ($fila = mysqli_fetch_assoc($resultado)) {
-                        echo $fila ['serial'];
-                        echo $fila ['model']; 
-                        echo $fila ['customer'];
-                        echo $fila ['location'];
-                        echo $fila ['region'];
-
-                    }
+                    include "search.php";
                     ?>
-
-                    <!--END  PLUGINS (FILTROS)-->                    
+                                   
                     
                     <br>
                     <table style="margin-left: 130px; margin-top: 70px;" class="table table-bordered table_id ">
@@ -190,7 +161,7 @@
                             <td><?php echo $fila['region']; ?></td>
                             <td><?php echo $fila['total']; ?></td>
                         </tr>
-
+                        
 
                     <?php
                     }
