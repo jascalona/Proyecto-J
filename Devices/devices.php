@@ -82,7 +82,7 @@
 
                             <div class="btn-group" role="group">
                                 <select class="btn btn-primary dropdown-toggle" name="model" id="model">
-                                    <option value="">Filtrar Modelos</option>
+                                    <option value="">Filtrar Modelo</option>
                                     <option value="C405">C405</option>
                                     <option value="wc3655">wc3655</option>
                                     <option value="wc3315">wc3315</option>
@@ -93,7 +93,7 @@
 
                             <div class="btn-group" role="group">
                                 <select class="btn btn-primary dropdown-toggle" name="customer" id="customer">
-                                    <option value="">Filter Customer</option>
+                                    <option value="">Filter Cliente</option>
                                     <option value="mi banco">mi banco</option>
                                     <option value="farmatodo">farmatodo</option>
                                     <option value="loky">loky</option>
