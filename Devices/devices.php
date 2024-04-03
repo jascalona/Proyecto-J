@@ -90,7 +90,7 @@
 
                             <div class="btn-group" role="group">
                                 <select class="btn btn-primary dropdown-toggle" name="customer" id="customer">
-                                    <option value="">Filter Cliente</option>
+                                    <option value="">Filtrar Cliente</option>
                                     <option value="MI BANCO, BANCO MICROFINACIERO, C.A.">MI BANCO</option>
                                     <option value="BANCO PROVINCIAL,S.A BANCO UNIVERSAL">BANCO PROVINCIAL,S.A BANCO UNIVERSAL</option>
                                     <option value="SIEMENS ENERGY, S.A.">SIEMENS</option>
