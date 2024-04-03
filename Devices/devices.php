@@ -78,8 +78,7 @@
 
                         <div class="plugins-filter">
                         <form action="devices.php" method="GET">
-                                
-                       
+                                                   
 
                             <div class="btn-group" role="group">
                                 <select class="btn btn-primary dropdown-toggle" name="model" id="model">
