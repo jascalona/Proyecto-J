@@ -74,8 +74,6 @@
 
                     <!--SATRT PLUGINS (FILTROS)-->
 
-                        
-
                         <div class="plugins-filter">
                         <form action="devices.php" method="GET">
 
@@ -94,16 +92,60 @@
                                 <select class="btn btn-primary dropdown-toggle" name="customer" id="customer">
                                     <option value="">Filter Cliente</option>
                                     <option value="MI BANCO, BANCO MICROFINACIERO, C.A.">MI BANCO</option>
+                                    <option value="BANCO PROVINCIAL,S.A BANCO UNIVERSAL">BANCO PROVINCIAL,S.A BANCO UNIVERSAL</option>
                                     <option value="SIEMENS ENERGY, S.A.">SIEMENS</option>
                                     <option value="CORPORACION XDV">CORPORACION XDV</option>
                                     <option value="A.C. CENTRO MEDICO DOCENTE LA TRINIDAD">CENTRO MEDICO DOCENTE</option>
                                     <option value="SEGUROS VENEZUELA, C.A.">SEGUROS VENEZUELA</option>
                                     <option value="MMS COMUNICACIONES">MMS COMUNICACIONES</option>
                                     <option value="C.A. CIGARRERA BIGOTT SUCS">C.A. CIGARRERA BIGOTT SUCS</option>
-                                    <option value=""></option>
-                                    <option value="loky">loky</option>
-                                    <option value="caf">caf</option>
-                                    <option value="polar">polar</option>
+                                    <option value="AGROBIGOTT, C.A.">AGROBIGOTT, C.A.</option>
+                                    <option value="FUNDACION BIGOTT">FUNDACION BIGOTT</option>
+                                    <option value="DISTRIBUIDORA BIGOTT, C.A.">DISTRIBUIDORA BIGOTT, C.A.</option>
+                                    <option value="Farmatodo C.A.">Farmatodo C.A.</option>
+                                    <option value="CERVECERIA POLAR, C.A">CERVECERIA POLAR, C.A</option>
+                                    <option value="PEPSI-COLA VENEZUELA,C.A.">PEPSI-COLA VENEZUELA,C.A.</option>
+                                    <option value="FUNDACION DANAC">FUNDACION DANAC</option>
+                                    <option value="ALIMENTOS POLAR COMERCIAL C.A.">ALIMENTOS POLAR COMERCIAL C.A.</option>
+                                    <option value="DHL FLETES AEREOS C.A">DHL FLETES AEREOS C.A</option>
+                                    <option value="DHL EXPRESS ADUANA VENEZUELA, C.A">DHL EXPRESS ADUANA VENEZUELA, C.A</option>
+                                    <option value="INVERSORA LOCKEY C.A.">INVERSORA LOCKEY C.A.</option>
+                                    <option value="MERCADOLIBRE VENEZUELA, S.R.L.">MERCADOLIBRE VENEZUELA, S.R.L.</option>
+                                    <option value="VENSECAR INTERNACIONAL, C.A.">VENSECAR INTERNACIONAL, C.A.</option>
+                                    <option value="Corporacion Andina de">Corporacion Andina de</option>
+                                    <option value="MEDICOS UNIDOS LOS JABILLOS, C.A">MEDICOS UNIDOS LOS JABILLOS, C.A</option>
+                                    <option value="CIRION TECHNOLOGIES, S.A. (Centurilink)">CIRION TECHNOLOGIES, S.A. (Centurilink)</option>
+                                    <option value="MANUFACTURAS DE PAPEL CA (MANPA) SACA">MANUFACTURAS DE PAPEL CA (MANPA) SACA</option>
+                                    <option value="VENSECAR INTERNACIONAL, C.A.">VENSECAR INTERNACIONAL, C.A.</option>
+                                    <option value="AVICOLA LA GUASIMA, C.A">AVICOLA LA GUASIMA, C.A</option>
+                                    <option value="HUAWEI TECHNOLOGIES DE VENEZUELA, S.A.">HUAWEI</option>
+                                    <option value="CONSORCIO GRANO ALTO">CONSORCIO GRANO ALTO</option>
+                                    <option value="PASTAS CAPRI">PASTAS CAPRI</option>
+                                    <option value="TODOTICKET 2004,C.A.">TODOTICKET 2004,C.A.</option>
+                                    <option value="BBVA SEGUROS C.A">BBVA SEGUROS C.A</option>
+                                    <option value="PERFUMES FACTORY, C.A">PERFUMES FACTORY, C.A</option>
+                                    <option value="CONS. DE VALORES E INVERS COVAIN C.A.">CONS. DE VALORES E INVERS COVAIN C.A.</option>
+                                    <option value="JOHN CRANE VENEZUELA, C.A.">JOHN CRANE VENEZUELA, C.A.</option>
+                                    <option value="Empresas Tecnoconsult Grupo Tecno, S.A">Empresas Tecnoconsult Grupo Tecno, S.A</option>
+                                    <option value="CIRION TECHNOLOGIES, S.A. (Centurilink)">CIRION TECHNOLOGIES, S.A. (Centurilink)</option>
+                                    <option value="AMWAY DE VENEZUELA LLC">AMWAY DE VENEZUELA LLC</option>
+                                    <option value="DEFENSA PUBLICA">DEFENSA PUBLICA</option>
+                                    <option value="OSTOS VELÁZQUEZ & ASOCIADOS">OSTOS VELÁZQUEZ & ASOCIADOS</option>
+                                    <option value="TRANSPORTE POLAR">TRANSPORTE POLAR</option>
+                                    <option value="PROVENCESA, S.A">PROVENCESA, S.A</option>
+                                    <option value="DIVISION 365 SEGURIDAD A.C.">DIVISION 365 SEGURIDAD A.C.</option>
+                                    <option value="ASO CIV CTRO NUT INFAN ANT">ASO CIV CTRO NUT INFAN ANT</option>
+                                    <option value="XEROFFICE MONAGAS, C.A">XEROFFICE MONAGAS, C.A</option>
+                                    <option value="GOLCOPY 2010, C.A.">GOLCOPY 2010, C.A.</option>
+                                    <option value="LABORATORIOS LETI S.A.V">LABORATORIOS LETI S.A.V</option>
+                                    <option value="EMBAJADA DE PANAMA">EMBAJADA DE PANAMA</option>
+                                    <option value="SABORES DEL MAR 2022, C.A">SABORES DEL MAR 2022, C.A</option>
+                                    <option value="EMBAJADA DE BRASIL">EMBAJADA DE BRASIL</option>
+                                    <option value="OMNITEC INTEGRADORES C.A.">OMNITEC INTEGRADORES C.A.</option>
+                                    <option value="MPP DE ECON.FINANZAS Y COMERCIO EXTERIOR (ONT)">ONT</option>
+                                    <option value="PROYECTOS SURADEM">PROYECTOS SURADEM</option>
+                                    <option value="ITOCHU VENEZUELA S.A.">ITOCHU VENEZUELA S.A.</option>
+                                    <option value="">  </option>
                                 </select>
                             </div>
 
