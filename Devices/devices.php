@@ -78,7 +78,6 @@
 
                         <div class="plugins-filter">
                         <form action="devices.php" method="GET">
-                                                   
 
                             <div class="btn-group" role="group">
                                 <select class="btn btn-primary dropdown-toggle" name="model" id="model">
@@ -94,8 +93,14 @@
                             <div class="btn-group" role="group">
                                 <select class="btn btn-primary dropdown-toggle" name="customer" id="customer">
                                     <option value="">Filter Cliente</option>
-                                    <option value="mi banco">mi banco</option>
-                                    <option value="farmatodo">farmatodo</option>
+                                    <option value="MI BANCO, BANCO MICROFINACIERO, C.A.">MI BANCO</option>
+                                    <option value="SIEMENS ENERGY, S.A.">SIEMENS</option>
+                                    <option value="CORPORACION XDV">CORPORACION XDV</option>
+                                    <option value="A.C. CENTRO MEDICO DOCENTE LA TRINIDAD">CENTRO MEDICO DOCENTE</option>
+                                    <option value="SEGUROS VENEZUELA, C.A.">SEGUROS VENEZUELA</option>
+                                    <option value="MMS COMUNICACIONES">MMS COMUNICACIONES</option>
+                                    <option value="C.A. CIGARRERA BIGOTT SUCS">C.A. CIGARRERA BIGOTT SUCS</option>
+                                    <option value=""></option>
                                     <option value="loky">loky</option>
                                     <option value="caf">caf</option>
                                     <option value="polar">polar</option>
@@ -134,9 +139,11 @@
                         
                         <thead>    
                             <tr>
+                                <th>RIF</th>
                                 <th>Serial</th>
                                 <th>Modelo</th>
                                 <th>Cliente</th>
+                                <th>DP</th>
                                 <th>Localidad</th>
                                 <th>Region</th>
                                 <th>Total</th>
@@ -148,7 +155,7 @@
                     <?php
 
                     $conexion=mysqli_connect("localhost","root","","pj");               
-                    $SQL="SELECT devices.serial, devices.model, devices.customer, devices.location, devices.region,
+                    $SQL="SELECT devices.rif, devices.serial, devices.model, devices.customer, devices.dp, devices.location, devices.region,
                     devices.total FROM devices
                     $where";
                     $dato = mysqli_query($conexion, $SQL);
@@ -160,9 +167,11 @@
                     
                     ?>
                         <tr>
+                            <td><?php echo $fila['rif']; ?></td>
                             <td><?php echo $fila['serial']; ?></td>
                             <td><?php echo $fila['model']; ?></td>
                             <td><?php echo $fila['customer']; ?></td>
+                            <td><?php echo $fila['dp']; ?></td>
                             <td><?php echo $fila['location']; ?></td>
                             <td><?php echo $fila['region']; ?></td>
                             <td><?php echo $fila['total']; ?></td>

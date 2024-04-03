@@ -33,9 +33,11 @@ while ($fila = mysqli_fetch_assoc($dato)) {
 
     ?>
     <tr>
+        <td><?php echo $fila['rif']; ?></td>
         <td><?php echo $fila['serial']; ?></td>
         <td><?php echo $fila['model']; ?></td>
         <td><?php echo $fila['customer']; ?></td>
+        <td><?php echo $fila['dp']; ?></td>
         <td><?php echo $fila['location']; ?></td>
         <td><?php echo $fila['region']; ?></td>
         <td><?php echo $fila['total']; ?></td>
