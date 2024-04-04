@@ -73,9 +73,7 @@
 
 
                     <!--SATRT PLUGINS (FILTROS)-->
-                    <?php
-                    include "controlador/search.php";
-                    ?>
+
                         <div class="plugins-filter">
                         <form action="devices.php" method="GET">
 
