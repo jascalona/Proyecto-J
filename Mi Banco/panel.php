@@ -116,7 +116,7 @@
 <br>
         <!--start  plugins-->
 
-            <div style="margin-top: 20px; margin-left: 15%; " class="plugin-filter">
+            <div style="margin-top: -58px; margin-left: 24%; " class="plugin-filter">
                 <form action="panel.php" method="GET">
 
                     <div style="position: absolute; margin-left: 10%;" class="btn-grop" role="group">
@@ -154,17 +154,27 @@
                         </select>
                     </div>
 
+                    <br>
 
+                    <div style="margin-left: -12%;" class="btn-filter">
+                        <div class="btn-group" role="group">
+                                <button type="submit" name="search" id="search" class="btn btn-primary" value="search">Aplicar Filtros</button>
+                            </div>
+                            
 
-                </form>
-            </div>
+                            <div style="margin-left: 10px;" class="btn-group" role="group">
+                                <button type="submit" name="reset" id="reset" class="btn btn-primary" value="reset">Limpiar Filtros</button>
+                            </div>
+                        
+                        </form>
+                    </div>
 
         <!--end plugins-->
 
 
 
         
-            <div style="margin-right: 10%; margin-top: 200px; margin-left: 15% ; " class="container-vistas">
+            <div style="margin-right: 10%; margin-top: 200px; margin-left: -12%;" class="container-vistas">
                 <table class="table table-striped" >    
             
                 <thead class="bg-info">
