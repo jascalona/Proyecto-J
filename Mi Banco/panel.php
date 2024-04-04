@@ -120,7 +120,7 @@
                 <form action="panel.php" method="GET">
 
                     <div style="position: absolute; margin-left: 10%;" class="btn-grop" role="group">
-                        <select class="btn btn-primary dropdown-toggle" name="modelo" id="modelo">
+                        <select class="btn btn-primary dropdown-toggle" name="location" id="location">
                             <option value="">Filtrar Localidad</option>
                             <option value="">B405</option>
                             <option value="">C405</option>
@@ -132,7 +132,7 @@
 
                     
                     <div style="position: absolute; margin-left: 21%;" class="btn-grop" role="group">
-                        <select class="btn btn-primary dropdown-toggle" name="modelo" id="modelo">
+                        <select class="btn btn-primary dropdown-toggle" name="date" id="date">
                             <option value="">Filtrar Fecha</option>
                             <option value="">B405</option>
                             <option value="">C405</option>
@@ -146,9 +146,9 @@
                     <div class="btn-grop" role="group">
                         <select class="btn btn-primary dropdown-toggle" name="modelo" id="modelo">
                             <option value="">Filtrar Modelo</option>
-                            <option value="">B405</option>
-                            <option value="">C405</option>
-                            <option value="">WC7220</option>
+                            <option value="b405">b405</option>
+                            <option value="C7000">C7000</option>
+                            <option value="C405">C405</option>
                             <option value="">PHASER</option>
                             <option value="">C7000</option>
                         </select>
@@ -192,8 +192,10 @@
                 <tbody>
                     <?php
                     include "Conn/conexion.php";
+                    include "controlador/plugins.php";
                     $sql=$conexion->query(" select *from miBanco ");
-                    while($datos = $sql->fetch_object()){ ?>
+                    while($datos = $sql->fetch_object()){ 
+                        ?>
 
                         <tr>
                             <td><?= $datos->id?></td>
@@ -210,6 +212,7 @@
                             </td>
                         </tr>
                         <?php
+                        
                         }
                         ?>
                 </tbody>
