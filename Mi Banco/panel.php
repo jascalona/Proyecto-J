@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="/JS/CSS/framework.css">
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>    
 
 <body>
     
@@ -112,6 +113,56 @@
                 </div>
         </div>
         <!--end btn modal-->
+<br>
+        <!--start  plugins-->
+
+            <div style="margin-top: 20px; margin-left: 15%; " class="plugin-filter">
+                <form action="panel.php" method="GET">
+
+                    <div style="position: absolute; margin-left: 10%;" class="btn-grop" role="group">
+                        <select class="btn btn-primary dropdown-toggle" name="modelo" id="modelo">
+                            <option value="">Filtrar Localidad</option>
+                            <option value="">B405</option>
+                            <option value="">C405</option>
+                            <option value="">WC7220</option>
+                            <option value="">PHASER</option>
+                            <option value="">C7000</option>
+                        </select>
+                    </div>
+
+                    
+                    <div style="position: absolute; margin-left: 21%;" class="btn-grop" role="group">
+                        <select class="btn btn-primary dropdown-toggle" name="modelo" id="modelo">
+                            <option value="">Filtrar Fecha</option>
+                            <option value="">B405</option>
+                            <option value="">C405</option>
+                            <option value="">WC7220</option>
+                            <option value="">PHASER</option>
+                            <option value="">C7000</option>
+                        </select>
+                    </div>
+
+
+                    <div class="btn-grop" role="group">
+                        <select class="btn btn-primary dropdown-toggle" name="modelo" id="modelo">
+                            <option value="">Filtrar Modelo</option>
+                            <option value="">B405</option>
+                            <option value="">C405</option>
+                            <option value="">WC7220</option>
+                            <option value="">PHASER</option>
+                            <option value="">C7000</option>
+                        </select>
+                    </div>
+
+
+
+                </form>
+            </div>
+
+        <!--end plugins-->
+
+
+
         
             <div style="margin-right: 10%; margin-top: 200px; margin-left: 15% ; " class="container-vistas">
                 <table class="table table-striped" >    
