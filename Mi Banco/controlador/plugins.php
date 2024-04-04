@@ -19,9 +19,9 @@ $sql = " SELECT *FROM mibanco WHERE 1=1";
         $sql .= " AND  modelo LIKE '%$modelo' AND location LIKE '%$location' AND date LIKE '%$date' ";
     }
 
- //   if (!empty($date)) {
-   //     $sql .= " AND modelo LIKE '%$modelo'  AND location LIKE '%$location' AND date LIKE '%$date' ";
-    //}
+    if (!empty($date)) {
+     $sql .= " AND modelo LIKE '%$modelo'  AND location LIKE '%$location' AND date LIKE '%$date' ";
+    }
 
     $dato = mysqli_query($conexion, $sql);
 

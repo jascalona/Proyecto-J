@@ -134,11 +134,9 @@
                     <div style="position: absolute; margin-left: 21%;" class="btn-grop" role="group">
                         <select class="btn btn-primary dropdown-toggle" name="date" id="date">
                             <option value="">Filtrar Fecha</option>
-                            <option value="">B405</option>
-                            <option value="">C405</option>
-                            <option value="">WC7220</option>
-                            <option value="">PHASER</option>
-                            <option value="">C7000</option>
+                            <option value="2024-04-04">2024-04-04</option>
+                            <option value="2023-05-22">2023-05-22</option>
+                          
                         </select>
                     </div>
 
@@ -196,7 +194,7 @@
                     $sql=$conexion->query(" select *from miBanco ");
                     while($datos = $sql->fetch_object()){ 
                         ?>
-
+            <!--
                         <tr>
                             <td><?= $datos->id?></td>
                             <td><?= $datos->serial?></td>
@@ -211,6 +209,7 @@
                                 <a href="panel.php?id=<?= $datos->id?>"><i class='bx bx-trash-alt'></i></a>
                             </td>
                         </tr>
+            -->
                         <?php
                         
                         }
