@@ -55,6 +55,7 @@
                     }
 
                     }
+
                     ?>
                     <br>
 
@@ -203,7 +204,7 @@
                     $dato = mysqli_query($conexion, $SQL);
 
                     include "search.php";
-
+                    
                     if($dato -> num_rows >1){
                     while($fila=mysqli_fetch_array($dato)){
                     
